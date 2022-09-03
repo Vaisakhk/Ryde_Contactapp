@@ -1,0 +1,788 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E91FF64628C3F153005981A4 /* RydeContactAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF64528C3F153005981A4 /* RydeContactAppTests.swift */; };
+		E91FF65028C3F153005981A4 /* RydeContactAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF64F28C3F153005981A4 /* RydeContactAppUITests.swift */; };
+		E91FF65228C3F153005981A4 /* RydeContactAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF65128C3F153005981A4 /* RydeContactAppUITestsLaunchTests.swift */; };
+		E91FF67728C3F1DF005981A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF65F28C3F1DF005981A4 /* AppDelegate.swift */; };
+		E91FF67828C3F1DF005981A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF66028C3F1DF005981A4 /* SceneDelegate.swift */; };
+		E91FF67928C3F1DF005981A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF66728C3F1DF005981A4 /* ViewController.swift */; };
+		E91FF67A28C3F1DF005981A4 /* RydeContactApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E91FF66F28C3F1DF005981A4 /* RydeContactApp.xcdatamodeld */; };
+		E91FF67B28C3F1DF005981A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91FF67228C3F1DF005981A4 /* Assets.xcassets */; };
+		E91FF67C28C3F1DF005981A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91FF67328C3F1DF005981A4 /* LaunchScreen.storyboard */; };
+		E91FF67D28C3F1DF005981A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91FF67528C3F1DF005981A4 /* Main.storyboard */; };
+		E91FF67F28C3F279005981A4 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF67E28C3F279005981A4 /* HomeRouter.swift */; };
+		E91FF68128C3F28A005981A4 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF68028C3F28A005981A4 /* HomeInteractor.swift */; };
+		E91FF68328C3F29F005981A4 /* HomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF68228C3F29F005981A4 /* HomeProtocol.swift */; };
+		E91FF68528C3F2AB005981A4 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF68428C3F2AB005981A4 /* HomePresenter.swift */; };
+		E91FF69728C3F331005981A4 /* BaseInteractorToPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF69228C3F331005981A4 /* BaseInteractorToPresenterProtocol.swift */; };
+		E91FF69828C3F331005981A4 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF69328C3F331005981A4 /* BasePresenter.swift */; };
+		E91FF69928C3F331005981A4 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF69428C3F331005981A4 /* BaseRouter.swift */; };
+		E91FF69A28C3F331005981A4 /* BaseInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF69528C3F331005981A4 /* BaseInteractorProtocol.swift */; };
+		E91FF69B28C3F331005981A4 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF69628C3F331005981A4 /* BaseViewProtocol.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E91FF64228C3F153005981A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E91FF62028C3F14F005981A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E91FF62728C3F14F005981A4;
+			remoteInfo = RydeContactApp;
+		};
+		E91FF64C28C3F153005981A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E91FF62028C3F14F005981A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E91FF62728C3F14F005981A4;
+			remoteInfo = RydeContactApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E91FF62828C3F14F005981A4 /* RydeContactApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RydeContactApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91FF63C28C3F153005981A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E91FF64128C3F153005981A4 /* RydeContactAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RydeContactAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91FF64528C3F153005981A4 /* RydeContactAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RydeContactAppTests.swift; sourceTree = "<group>"; };
+		E91FF64B28C3F153005981A4 /* RydeContactAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RydeContactAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91FF64F28C3F153005981A4 /* RydeContactAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RydeContactAppUITests.swift; sourceTree = "<group>"; };
+		E91FF65128C3F153005981A4 /* RydeContactAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RydeContactAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E91FF65F28C3F1DF005981A4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E91FF66028C3F1DF005981A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E91FF66728C3F1DF005981A4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E91FF67028C3F1DF005981A4 /* RydeContactApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RydeContactApp.xcdatamodel; sourceTree = "<group>"; };
+		E91FF67228C3F1DF005981A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E91FF67428C3F1DF005981A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E91FF67628C3F1DF005981A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E91FF67E28C3F279005981A4 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		E91FF68028C3F28A005981A4 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		E91FF68228C3F29F005981A4 /* HomeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocol.swift; sourceTree = "<group>"; };
+		E91FF68428C3F2AB005981A4 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		E91FF69228C3F331005981A4 /* BaseInteractorToPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseInteractorToPresenterProtocol.swift; sourceTree = "<group>"; };
+		E91FF69328C3F331005981A4 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		E91FF69428C3F331005981A4 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		E91FF69528C3F331005981A4 /* BaseInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseInteractorProtocol.swift; sourceTree = "<group>"; };
+		E91FF69628C3F331005981A4 /* BaseViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E91FF62528C3F14F005981A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E91FF63E28C3F153005981A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E91FF64828C3F153005981A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E91FF61F28C3F14F005981A4 = {
+			isa = PBXGroup;
+			children = (
+				E91FF62A28C3F14F005981A4 /* RydeContactApp */,
+				E91FF64428C3F153005981A4 /* RydeContactAppTests */,
+				E91FF64E28C3F153005981A4 /* RydeContactAppUITests */,
+				E91FF62928C3F14F005981A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E91FF62928C3F14F005981A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF62828C3F14F005981A4 /* RydeContactApp.app */,
+				E91FF64128C3F153005981A4 /* RydeContactAppTests.xctest */,
+				E91FF64B28C3F153005981A4 /* RydeContactAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E91FF62A28C3F14F005981A4 /* RydeContactApp */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF65E28C3F1DF005981A4 /* AppDelegate */,
+				E91FF67128C3F1DF005981A4 /* AppUI */,
+				E91FF66D28C3F1DF005981A4 /* Helper */,
+				E91FF66128C3F1DF005981A4 /* Module */,
+				E91FF63C28C3F153005981A4 /* Info.plist */,
+			);
+			path = RydeContactApp;
+			sourceTree = "<group>";
+		};
+		E91FF64428C3F153005981A4 /* RydeContactAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF64528C3F153005981A4 /* RydeContactAppTests.swift */,
+			);
+			path = RydeContactAppTests;
+			sourceTree = "<group>";
+		};
+		E91FF64E28C3F153005981A4 /* RydeContactAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF64F28C3F153005981A4 /* RydeContactAppUITests.swift */,
+				E91FF65128C3F153005981A4 /* RydeContactAppUITestsLaunchTests.swift */,
+			);
+			path = RydeContactAppUITests;
+			sourceTree = "<group>";
+		};
+		E91FF65E28C3F1DF005981A4 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF65F28C3F1DF005981A4 /* AppDelegate.swift */,
+				E91FF66028C3F1DF005981A4 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		E91FF66128C3F1DF005981A4 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF69128C3F331005981A4 /* Base */,
+				E91FF66228C3F1DF005981A4 /* Home */,
+				E91FF66A28C3F1DF005981A4 /* Edit */,
+				E91FF66B28C3F1DF005981A4 /* Detail */,
+				E91FF66C28C3F1DF005981A4 /* Add */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		E91FF66228C3F1DF005981A4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF66328C3F1DF005981A4 /* Entity */,
+				E91FF66428C3F1DF005981A4 /* Presenter */,
+				E91FF66528C3F1DF005981A4 /* Protocol */,
+				E91FF66628C3F1DF005981A4 /* View */,
+				E91FF66828C3F1DF005981A4 /* Interactor */,
+				E91FF66928C3F1DF005981A4 /* Router */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E91FF66328C3F1DF005981A4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E91FF66428C3F1DF005981A4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF68428C3F2AB005981A4 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E91FF66528C3F1DF005981A4 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF68228C3F29F005981A4 /* HomeProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		E91FF66628C3F1DF005981A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF66728C3F1DF005981A4 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E91FF66828C3F1DF005981A4 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF68028C3F28A005981A4 /* HomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E91FF66928C3F1DF005981A4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF67E28C3F279005981A4 /* HomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E91FF66A28C3F1DF005981A4 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		E91FF66B28C3F1DF005981A4 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E91FF66C28C3F1DF005981A4 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		E91FF66D28C3F1DF005981A4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF66E28C3F1DF005981A4 /* CoreData */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		E91FF66E28C3F1DF005981A4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF66F28C3F1DF005981A4 /* RydeContactApp.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		E91FF67128C3F1DF005981A4 /* AppUI */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF67228C3F1DF005981A4 /* Assets.xcassets */,
+				E91FF67328C3F1DF005981A4 /* LaunchScreen.storyboard */,
+				E91FF67528C3F1DF005981A4 /* Main.storyboard */,
+			);
+			path = AppUI;
+			sourceTree = "<group>";
+		};
+		E91FF69128C3F331005981A4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF69228C3F331005981A4 /* BaseInteractorToPresenterProtocol.swift */,
+				E91FF69328C3F331005981A4 /* BasePresenter.swift */,
+				E91FF69428C3F331005981A4 /* BaseRouter.swift */,
+				E91FF69528C3F331005981A4 /* BaseInteractorProtocol.swift */,
+				E91FF69628C3F331005981A4 /* BaseViewProtocol.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E91FF62728C3F14F005981A4 /* RydeContactApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E91FF65528C3F153005981A4 /* Build configuration list for PBXNativeTarget "RydeContactApp" */;
+			buildPhases = (
+				E91FF62428C3F14F005981A4 /* Sources */,
+				E91FF62528C3F14F005981A4 /* Frameworks */,
+				E91FF62628C3F14F005981A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RydeContactApp;
+			productName = RydeContactApp;
+			productReference = E91FF62828C3F14F005981A4 /* RydeContactApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E91FF64028C3F153005981A4 /* RydeContactAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E91FF65828C3F153005981A4 /* Build configuration list for PBXNativeTarget "RydeContactAppTests" */;
+			buildPhases = (
+				E91FF63D28C3F153005981A4 /* Sources */,
+				E91FF63E28C3F153005981A4 /* Frameworks */,
+				E91FF63F28C3F153005981A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E91FF64328C3F153005981A4 /* PBXTargetDependency */,
+			);
+			name = RydeContactAppTests;
+			productName = RydeContactAppTests;
+			productReference = E91FF64128C3F153005981A4 /* RydeContactAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E91FF64A28C3F153005981A4 /* RydeContactAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E91FF65B28C3F153005981A4 /* Build configuration list for PBXNativeTarget "RydeContactAppUITests" */;
+			buildPhases = (
+				E91FF64728C3F153005981A4 /* Sources */,
+				E91FF64828C3F153005981A4 /* Frameworks */,
+				E91FF64928C3F153005981A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E91FF64D28C3F153005981A4 /* PBXTargetDependency */,
+			);
+			name = RydeContactAppUITests;
+			productName = RydeContactAppUITests;
+			productReference = E91FF64B28C3F153005981A4 /* RydeContactAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E91FF62028C3F14F005981A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					E91FF62728C3F14F005981A4 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					E91FF64028C3F153005981A4 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = E91FF62728C3F14F005981A4;
+					};
+					E91FF64A28C3F153005981A4 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = E91FF62728C3F14F005981A4;
+					};
+				};
+			};
+			buildConfigurationList = E91FF62328C3F14F005981A4 /* Build configuration list for PBXProject "RydeContactApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E91FF61F28C3F14F005981A4;
+			productRefGroup = E91FF62928C3F14F005981A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E91FF62728C3F14F005981A4 /* RydeContactApp */,
+				E91FF64028C3F153005981A4 /* RydeContactAppTests */,
+				E91FF64A28C3F153005981A4 /* RydeContactAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E91FF62628C3F14F005981A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E91FF67D28C3F1DF005981A4 /* Main.storyboard in Resources */,
+				E91FF67B28C3F1DF005981A4 /* Assets.xcassets in Resources */,
+				E91FF67C28C3F1DF005981A4 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E91FF63F28C3F153005981A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E91FF64928C3F153005981A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E91FF62428C3F14F005981A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E91FF68328C3F29F005981A4 /* HomeProtocol.swift in Sources */,
+				E91FF69828C3F331005981A4 /* BasePresenter.swift in Sources */,
+				E91FF67A28C3F1DF005981A4 /* RydeContactApp.xcdatamodeld in Sources */,
+				E91FF67928C3F1DF005981A4 /* ViewController.swift in Sources */,
+				E91FF69B28C3F331005981A4 /* BaseViewProtocol.swift in Sources */,
+				E91FF67728C3F1DF005981A4 /* AppDelegate.swift in Sources */,
+				E91FF68128C3F28A005981A4 /* HomeInteractor.swift in Sources */,
+				E91FF69728C3F331005981A4 /* BaseInteractorToPresenterProtocol.swift in Sources */,
+				E91FF69A28C3F331005981A4 /* BaseInteractorProtocol.swift in Sources */,
+				E91FF69928C3F331005981A4 /* BaseRouter.swift in Sources */,
+				E91FF67828C3F1DF005981A4 /* SceneDelegate.swift in Sources */,
+				E91FF67F28C3F279005981A4 /* HomeRouter.swift in Sources */,
+				E91FF68528C3F2AB005981A4 /* HomePresenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E91FF63D28C3F153005981A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E91FF64628C3F153005981A4 /* RydeContactAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E91FF64728C3F153005981A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E91FF65028C3F153005981A4 /* RydeContactAppUITests.swift in Sources */,
+				E91FF65228C3F153005981A4 /* RydeContactAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E91FF64328C3F153005981A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E91FF62728C3F14F005981A4 /* RydeContactApp */;
+			targetProxy = E91FF64228C3F153005981A4 /* PBXContainerItemProxy */;
+		};
+		E91FF64D28C3F153005981A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E91FF62728C3F14F005981A4 /* RydeContactApp */;
+			targetProxy = E91FF64C28C3F153005981A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E91FF67328C3F1DF005981A4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E91FF67428C3F1DF005981A4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E91FF67528C3F1DF005981A4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E91FF67628C3F1DF005981A4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E91FF65328C3F153005981A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E91FF65428C3F153005981A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E91FF65628C3F153005981A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6C4569BGYW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RydeContactApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Vk.RydeContactApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E91FF65728C3F153005981A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6C4569BGYW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RydeContactApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Vk.RydeContactApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E91FF65928C3F153005981A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6C4569BGYW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Vk.RydeContactAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RydeContactApp.app/RydeContactApp";
+			};
+			name = Debug;
+		};
+		E91FF65A28C3F153005981A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6C4569BGYW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Vk.RydeContactAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RydeContactApp.app/RydeContactApp";
+			};
+			name = Release;
+		};
+		E91FF65C28C3F153005981A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6C4569BGYW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Vk.RydeContactAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RydeContactApp;
+			};
+			name = Debug;
+		};
+		E91FF65D28C3F153005981A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6C4569BGYW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Vk.RydeContactAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RydeContactApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E91FF62328C3F14F005981A4 /* Build configuration list for PBXProject "RydeContactApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E91FF65328C3F153005981A4 /* Debug */,
+				E91FF65428C3F153005981A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E91FF65528C3F153005981A4 /* Build configuration list for PBXNativeTarget "RydeContactApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E91FF65628C3F153005981A4 /* Debug */,
+				E91FF65728C3F153005981A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E91FF65828C3F153005981A4 /* Build configuration list for PBXNativeTarget "RydeContactAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E91FF65928C3F153005981A4 /* Debug */,
+				E91FF65A28C3F153005981A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E91FF65B28C3F153005981A4 /* Build configuration list for PBXNativeTarget "RydeContactAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E91FF65C28C3F153005981A4 /* Debug */,
+				E91FF65D28C3F153005981A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E91FF66F28C3F1DF005981A4 /* RydeContactApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E91FF67028C3F1DF005981A4 /* RydeContactApp.xcdatamodel */,
+			);
+			currentVersion = E91FF67028C3F1DF005981A4 /* RydeContactApp.xcdatamodel */;
+			path = RydeContactApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E91FF62028C3F14F005981A4 /* Project object */;
+}

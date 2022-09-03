@@ -55,7 +55,7 @@ class ViewController: UIViewController {
 
 extension ViewController : HomePresenterToViewProtocol {
     func refreshTableView() {
-    
+        tableView.reloadData()
     }
     
     func hideEmptyView() {
@@ -71,6 +71,10 @@ extension ViewController : HomePresenterToViewProtocol {
 //MARK:- Table View Delegate and Datasource
 
 extension ViewController : UITableViewDelegate,UITableViewDataSource {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        presenter?.reachedBottomOftheScroll(with: indexPath.row)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return  presenter?.contactList?.count ?? 0
     }

@@ -28,6 +28,11 @@
 		E91FF69B28C3F331005981A4 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF69628C3F331005981A4 /* BaseViewProtocol.swift */; };
 		E91FF6A028C40202005981A4 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF69E28C40202005981A4 /* HomeTableViewCell.swift */; };
 		E91FF6A128C40202005981A4 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91FF69F28C40202005981A4 /* HomeTableViewCell.xib */; };
+		E91FF6A428C4065B005981A4 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6A328C4065B005981A4 /* NetworkHandler.swift */; };
+		E91FF6A728C40CAA005981A4 /* ContactList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6A628C40CA9005981A4 /* ContactList.swift */; };
+		E91FF6A928C40FDE005981A4 /* CoreDatahandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6A828C40FDE005981A4 /* CoreDatahandler.swift */; };
+		E91FF6AC28C41548005981A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6AB28C41548005981A4 /* Constants.swift */; };
+		E91FF6AF28C41C0F005981A4 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = E91FF6AE28C41C0F005981A4 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +78,10 @@
 		E91FF69628C3F331005981A4 /* BaseViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
 		E91FF69E28C40202005981A4 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		E91FF69F28C40202005981A4 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		E91FF6A328C4065B005981A4 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
+		E91FF6A628C40CA9005981A4 /* ContactList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactList.swift; sourceTree = "<group>"; };
+		E91FF6A828C40FDE005981A4 /* CoreDatahandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDatahandler.swift; sourceTree = "<group>"; };
+		E91FF6AB28C41548005981A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91FF6AF28C41C0F005981A4 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +196,7 @@
 		E91FF66328C3F1DF005981A4 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				E91FF6A628C40CA9005981A4 /* ContactList.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -256,6 +267,8 @@
 		E91FF66D28C3F1DF005981A4 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				E91FF6AA28C41534005981A4 /* Constants */,
+				E91FF6A228C4064C005981A4 /* NeworkHandler */,
 				E91FF66E28C3F1DF005981A4 /* CoreData */,
 			);
 			path = Helper;
@@ -265,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				E91FF66F28C3F1DF005981A4 /* RydeContactApp.xcdatamodeld */,
+				E91FF6A828C40FDE005981A4 /* CoreDatahandler.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -291,6 +305,22 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		E91FF6A228C4064C005981A4 /* NeworkHandler */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF6A328C4065B005981A4 /* NetworkHandler.swift */,
+			);
+			path = NeworkHandler;
+			sourceTree = "<group>";
+		};
+		E91FF6AA28C41534005981A4 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF6AB28C41548005981A4 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -307,6 +337,9 @@
 			dependencies = (
 			);
 			name = RydeContactApp;
+			packageProductDependencies = (
+				E91FF6AE28C41C0F005981A4 /* SDWebImage */,
+			);
 			productName = RydeContactApp;
 			productReference = E91FF62828C3F14F005981A4 /* RydeContactApp.app */;
 			productType = "com.apple.product-type.application";
@@ -379,6 +412,9 @@
 				Base,
 			);
 			mainGroup = E91FF61F28C3F14F005981A4;
+			packageReferences = (
+				E91FF6AD28C41C0F005981A4 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = E91FF62928C3F14F005981A4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -427,16 +463,20 @@
 				E91FF69828C3F331005981A4 /* BasePresenter.swift in Sources */,
 				E91FF6A028C40202005981A4 /* HomeTableViewCell.swift in Sources */,
 				E91FF67A28C3F1DF005981A4 /* RydeContactApp.xcdatamodeld in Sources */,
+				E91FF6A728C40CAA005981A4 /* ContactList.swift in Sources */,
 				E91FF67928C3F1DF005981A4 /* ViewController.swift in Sources */,
 				E91FF69B28C3F331005981A4 /* BaseViewProtocol.swift in Sources */,
 				E91FF67728C3F1DF005981A4 /* AppDelegate.swift in Sources */,
 				E91FF68128C3F28A005981A4 /* HomeInteractor.swift in Sources */,
+				E91FF6A428C4065B005981A4 /* NetworkHandler.swift in Sources */,
 				E91FF69728C3F331005981A4 /* BaseInteractorToPresenterProtocol.swift in Sources */,
 				E91FF69A28C3F331005981A4 /* BaseInteractorProtocol.swift in Sources */,
 				E91FF69928C3F331005981A4 /* BaseRouter.swift in Sources */,
 				E91FF67828C3F1DF005981A4 /* SceneDelegate.swift in Sources */,
+				E91FF6A928C40FDE005981A4 /* CoreDatahandler.swift in Sources */,
 				E91FF67F28C3F279005981A4 /* HomeRouter.swift in Sources */,
 				E91FF68528C3F2AB005981A4 /* HomePresenter.swift in Sources */,
+				E91FF6AC28C41548005981A4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,6 +818,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E91FF6AD28C41C0F005981A4 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E91FF6AE28C41C0F005981A4 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E91FF6AD28C41C0F005981A4 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		E91FF66F28C3F1DF005981A4 /* RydeContactApp.xcdatamodeld */ = {

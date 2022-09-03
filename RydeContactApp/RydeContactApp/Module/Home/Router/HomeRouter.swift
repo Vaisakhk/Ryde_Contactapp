@@ -12,7 +12,7 @@ final class HomeRouter: BaseRouter {
         let view = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "viewController") as? ViewController ?? ViewController()
 
         super.init(viewController: view)
-        var interactor: HomePresenterToInteractorProtocol = HomeInteractor()
+        let interactor: HomePresenterToInteractorProtocol = HomeInteractor()
         let router: HomePresenterToRouterProtocol = self
         let presenter: HomeViewToPresenterProtocol & HomeInteractorToPresenterProtocol = HomePresenter(router: router, view: view, interactor: interactor)
         view.presenter = presenter

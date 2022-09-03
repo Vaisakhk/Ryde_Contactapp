@@ -7,33 +7,32 @@
 
 import Foundation
 
-protocol HomeViewToPresenterProtocol {
+protocol HomeViewToPresenterProtocol:BasePresenterProtocal {
     func viewDidload()
     func didClickContacts(for index: Int)
     func reachedBottomOftheScroll(with index: Int)
     var contactList: [Contact]? { get }
     var currentPage: Int? { get }
-    var currentKeyWord: String? { get set }
 }
 
-protocol HomePresenterToViewProtocol {
+protocol HomePresenterToViewProtocol:BaseViewProtocol {
     func refreshTableView()
     func hideEmptyView()
     func showEmptyView()
 }
 
-protocol HomePresenterToInteractorProtocol {
+protocol HomePresenterToInteractorProtocol:BaseInteractorProtocol {
     var presenter: HomeInteractorToPresenterProtocol? { get set }
-    func getContactData(with searchText: String, for page: Int)
-
+    func getSavedContactDetails()
+    func getContactData( for page: Int)
 }
 
-protocol HomePresenterToRouterProtocol {
+protocol HomePresenterToRouterProtocol:RouterProtocal {
     func pushToDetailScreen(contactID: String)
 }
 
-protocol HomeInteractorToPresenterProtocol {
-    func contactResultData(data: Contact)
+protocol HomeInteractorToPresenterProtocol:BaseInteractorToPresenterProtocol {
+    func contactResultData(data: [Contact], with totalPages : Int)
     func contactFetchFailedWithError(errorString: String)
 }
 

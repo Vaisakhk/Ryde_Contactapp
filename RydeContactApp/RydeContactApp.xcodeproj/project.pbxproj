@@ -26,6 +26,8 @@
 		E91FF69928C3F331005981A4 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF69428C3F331005981A4 /* BaseRouter.swift */; };
 		E91FF69A28C3F331005981A4 /* BaseInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF69528C3F331005981A4 /* BaseInteractorProtocol.swift */; };
 		E91FF69B28C3F331005981A4 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF69628C3F331005981A4 /* BaseViewProtocol.swift */; };
+		E91FF6A028C40202005981A4 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF69E28C40202005981A4 /* HomeTableViewCell.swift */; };
+		E91FF6A128C40202005981A4 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91FF69F28C40202005981A4 /* HomeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		E91FF69428C3F331005981A4 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		E91FF69528C3F331005981A4 /* BaseInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseInteractorProtocol.swift; sourceTree = "<group>"; };
 		E91FF69628C3F331005981A4 /* BaseViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
+		E91FF69E28C40202005981A4 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		E91FF69F28C40202005981A4 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,9 +124,9 @@
 			isa = PBXGroup;
 			children = (
 				E91FF65E28C3F1DF005981A4 /* AppDelegate */,
+				E91FF66128C3F1DF005981A4 /* Module */,
 				E91FF67128C3F1DF005981A4 /* AppUI */,
 				E91FF66D28C3F1DF005981A4 /* Helper */,
-				E91FF66128C3F1DF005981A4 /* Module */,
 				E91FF63C28C3F153005981A4 /* Info.plist */,
 			);
 			path = RydeContactApp;
@@ -206,6 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				E91FF66728C3F1DF005981A4 /* ViewController.swift */,
+				E91FF69E28C40202005981A4 /* HomeTableViewCell.swift */,
+				E91FF69F28C40202005981A4 /* HomeTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -391,6 +397,7 @@
 			files = (
 				E91FF67D28C3F1DF005981A4 /* Main.storyboard in Resources */,
 				E91FF67B28C3F1DF005981A4 /* Assets.xcassets in Resources */,
+				E91FF6A128C40202005981A4 /* HomeTableViewCell.xib in Resources */,
 				E91FF67C28C3F1DF005981A4 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +425,7 @@
 			files = (
 				E91FF68328C3F29F005981A4 /* HomeProtocol.swift in Sources */,
 				E91FF69828C3F331005981A4 /* BasePresenter.swift in Sources */,
+				E91FF6A028C40202005981A4 /* HomeTableViewCell.swift in Sources */,
 				E91FF67A28C3F1DF005981A4 /* RydeContactApp.xcdatamodeld in Sources */,
 				E91FF67928C3F1DF005981A4 /* ViewController.swift in Sources */,
 				E91FF69B28C3F331005981A4 /* BaseViewProtocol.swift in Sources */,

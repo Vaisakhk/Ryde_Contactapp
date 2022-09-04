@@ -20,15 +20,15 @@ final class HomeRouter: BaseRouter {
     }
 
     // MARK: - Navigate to Detail
-    private func navigateToDetail(idString: String) {
-//        let controller = DetailsRouter(idString)
-//        navigationController?.pushRouter(controller, animated: true)
+    private func navigateToDetail(selectedContactId: Int) {
+        let controller = DetailViewRouter(contactId: selectedContactId)
+        navigationController?.pushRouter(controller, animated: true)
     }
 }
 
 // MARK: - Home Presenter To Router Protocol
 extension HomeRouter: HomePresenterToRouterProtocol {
-    func pushToDetailScreen(contactID: String) {
-        navigateToDetail(idString: contactID)
+    func pushToDetailScreen(contactID: Int) {
+        navigateToDetail(selectedContactId: contactID)
     }
 }

@@ -27,8 +27,6 @@ class HomeInteractor: HomePresenterToInteractorProtocol {
                 DispatchQueue.main.async {
                     weakSelf.presenter?.contactResultData(data: weakSelf.getDataFromLocalDb(),with: response.totalPage)
                 }
-                
-                print(response)
                 break
             
             case .failure(let error) :

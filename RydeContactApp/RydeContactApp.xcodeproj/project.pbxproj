@@ -33,6 +33,12 @@
 		E91FF6A928C40FDE005981A4 /* CoreDatahandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6A828C40FDE005981A4 /* CoreDatahandler.swift */; };
 		E91FF6AC28C41548005981A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6AB28C41548005981A4 /* Constants.swift */; };
 		E91FF6AF28C41C0F005981A4 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = E91FF6AE28C41C0F005981A4 /* SDWebImage */; };
+		E91FF6B728C4201A005981A4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6B528C4201A005981A4 /* DetailViewController.swift */; };
+		E91FF6B828C4201A005981A4 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91FF6B628C4201A005981A4 /* DetailViewController.xib */; };
+		E91FF6BA28C42031005981A4 /* DetailViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6B928C42031005981A4 /* DetailViewRouter.swift */; };
+		E91FF6BC28C42047005981A4 /* DetailViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6BB28C42047005981A4 /* DetailViewPresenter.swift */; };
+		E91FF6BE28C4205B005981A4 /* DetailViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6BD28C4205A005981A4 /* DetailViewInteractor.swift */; };
+		E91FF6C128C42496005981A4 /* DetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6C028C42496005981A4 /* DetailProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +88,12 @@
 		E91FF6A628C40CA9005981A4 /* ContactList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactList.swift; sourceTree = "<group>"; };
 		E91FF6A828C40FDE005981A4 /* CoreDatahandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDatahandler.swift; sourceTree = "<group>"; };
 		E91FF6AB28C41548005981A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E91FF6B528C4201A005981A4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E91FF6B628C4201A005981A4 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		E91FF6B928C42031005981A4 /* DetailViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewRouter.swift; sourceTree = "<group>"; };
+		E91FF6BB28C42047005981A4 /* DetailViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewPresenter.swift; sourceTree = "<group>"; };
+		E91FF6BD28C4205A005981A4 /* DetailViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewInteractor.swift; sourceTree = "<group>"; };
+		E91FF6C028C42496005981A4 /* DetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +265,12 @@
 		E91FF66B28C3F1DF005981A4 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				E91FF6BF28C42088005981A4 /* Protocol */,
+				E91FF6B328C41FFF005981A4 /* Entity */,
+				E91FF6B228C41FFF005981A4 /* Interactor */,
+				E91FF6B428C41FFF005981A4 /* Presenter */,
+				E91FF6B028C41FFF005981A4 /* Router */,
+				E91FF6B128C41FFF005981A4 /* View */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -319,6 +337,54 @@
 				E91FF6AB28C41548005981A4 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		E91FF6B028C41FFF005981A4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF6B928C42031005981A4 /* DetailViewRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E91FF6B128C41FFF005981A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF6B528C4201A005981A4 /* DetailViewController.swift */,
+				E91FF6B628C4201A005981A4 /* DetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E91FF6B228C41FFF005981A4 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF6BD28C4205A005981A4 /* DetailViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E91FF6B328C41FFF005981A4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E91FF6B428C41FFF005981A4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF6BB28C42047005981A4 /* DetailViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E91FF6BF28C42088005981A4 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF6C028C42496005981A4 /* DetailProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,6 +499,7 @@
 			files = (
 				E91FF67D28C3F1DF005981A4 /* Main.storyboard in Resources */,
 				E91FF67B28C3F1DF005981A4 /* Assets.xcassets in Resources */,
+				E91FF6B828C4201A005981A4 /* DetailViewController.xib in Resources */,
 				E91FF6A128C40202005981A4 /* HomeTableViewCell.xib in Resources */,
 				E91FF67C28C3F1DF005981A4 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -469,11 +536,16 @@
 				E91FF67728C3F1DF005981A4 /* AppDelegate.swift in Sources */,
 				E91FF68128C3F28A005981A4 /* HomeInteractor.swift in Sources */,
 				E91FF6A428C4065B005981A4 /* NetworkHandler.swift in Sources */,
+				E91FF6B728C4201A005981A4 /* DetailViewController.swift in Sources */,
+				E91FF6C128C42496005981A4 /* DetailProtocol.swift in Sources */,
 				E91FF69728C3F331005981A4 /* BaseInteractorToPresenterProtocol.swift in Sources */,
 				E91FF69A28C3F331005981A4 /* BaseInteractorProtocol.swift in Sources */,
+				E91FF6BC28C42047005981A4 /* DetailViewPresenter.swift in Sources */,
 				E91FF69928C3F331005981A4 /* BaseRouter.swift in Sources */,
 				E91FF67828C3F1DF005981A4 /* SceneDelegate.swift in Sources */,
+				E91FF6BE28C4205B005981A4 /* DetailViewInteractor.swift in Sources */,
 				E91FF6A928C40FDE005981A4 /* CoreDatahandler.swift in Sources */,
+				E91FF6BA28C42031005981A4 /* DetailViewRouter.swift in Sources */,
 				E91FF67F28C3F279005981A4 /* HomeRouter.swift in Sources */,
 				E91FF68528C3F2AB005981A4 /* HomePresenter.swift in Sources */,
 				E91FF6AC28C41548005981A4 /* Constants.swift in Sources */,

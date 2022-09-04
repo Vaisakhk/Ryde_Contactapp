@@ -39,7 +39,9 @@ class HomePresenter: HomeViewToPresenterProtocol {
     }
     
     func didClickContacts(for index: Int) {
-        
+        if let contact = contactList?[index] {
+            _router?.pushToDetailScreen(contactID: Int(contact.id))
+        }
     }
     
     func reachedBottomOftheScroll(with index: Int) {

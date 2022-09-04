@@ -28,7 +28,7 @@ protocol HomePresenterToInteractorProtocol:BaseInteractorProtocol {
 }
 
 protocol HomePresenterToRouterProtocol:RouterProtocal {
-    func pushToDetailScreen(contactID: String)
+    func pushToDetailScreen(contactID: Int) 
 }
 
 protocol HomeInteractorToPresenterProtocol:BaseInteractorToPresenterProtocol {

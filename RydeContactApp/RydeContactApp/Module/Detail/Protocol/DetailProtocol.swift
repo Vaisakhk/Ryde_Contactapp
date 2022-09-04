@@ -9,8 +9,10 @@ import Foundation
 
 protocol DetailViewToPresenterProtocol:BasePresenterProtocal {
     func viewDidload()
+    func viewWillAppear()
     var currentContact: Contact? { get }
     var userName: String {get}
+    func didClickEditContacts()
 }
 
 protocol DetailPresenterToViewProtocol:BaseViewProtocol {
@@ -25,7 +27,7 @@ protocol DetailPresenterToInteractorProtocol:BaseInteractorProtocol {
 }
 
 protocol DetailPresenterToRouterProtocol:RouterProtocal {
-    func pushToEditScreen(contactID: String)
+    func pushToEditScreen(contactID: Int)
 }
 
 protocol DetailInteractorToPresenterProtocol:BaseInteractorToPresenterProtocol {

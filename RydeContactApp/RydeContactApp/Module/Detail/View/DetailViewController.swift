@@ -20,9 +20,12 @@ class DetailViewController: UIViewController {
     //MARK: - View Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        presenter?.viewDidload()
+        
         customizeUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        presenter?.viewWillAppear()
         populateData()
     }
     
@@ -50,7 +53,7 @@ class DetailViewController: UIViewController {
     //MARK: - View 
     
     @objc func leftButtonaction() {
-       
+        presenter?.didClickEditContacts()
     }
     
     

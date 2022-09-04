@@ -39,6 +39,13 @@
 		E91FF6BC28C42047005981A4 /* DetailViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6BB28C42047005981A4 /* DetailViewPresenter.swift */; };
 		E91FF6BE28C4205B005981A4 /* DetailViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6BD28C4205A005981A4 /* DetailViewInteractor.swift */; };
 		E91FF6C128C42496005981A4 /* DetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6C028C42496005981A4 /* DetailProtocol.swift */; };
+		E91FF6CE28C49A21005981A4 /* EditViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6C328C49A20005981A4 /* EditViewInteractor.swift */; };
+		E91FF6CF28C49A21005981A4 /* EditProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6C628C49A21005981A4 /* EditProtocol.swift */; };
+		E91FF6D028C49A21005981A4 /* EditViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6C828C49A21005981A4 /* EditViewPresenter.swift */; };
+		E91FF6D328C49A21005981A4 /* EditViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6CD28C49A21005981A4 /* EditViewRouter.swift */; };
+		E91FF6D628C49AA0005981A4 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6D428C49AA0005981A4 /* EditViewController.swift */; };
+		E91FF6D728C49AA0005981A4 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91FF6D528C49AA0005981A4 /* EditViewController.xib */; };
+		E91FF6D928C55E2E005981A4 /* EditResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6D828C55E2D005981A4 /* EditResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +101,13 @@
 		E91FF6BB28C42047005981A4 /* DetailViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewPresenter.swift; sourceTree = "<group>"; };
 		E91FF6BD28C4205A005981A4 /* DetailViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewInteractor.swift; sourceTree = "<group>"; };
 		E91FF6C028C42496005981A4 /* DetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProtocol.swift; sourceTree = "<group>"; };
+		E91FF6C328C49A20005981A4 /* EditViewInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewInteractor.swift; sourceTree = "<group>"; };
+		E91FF6C628C49A21005981A4 /* EditProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProtocol.swift; sourceTree = "<group>"; };
+		E91FF6C828C49A21005981A4 /* EditViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewPresenter.swift; sourceTree = "<group>"; };
+		E91FF6CD28C49A21005981A4 /* EditViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewRouter.swift; sourceTree = "<group>"; };
+		E91FF6D428C49AA0005981A4 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		E91FF6D528C49AA0005981A4 /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
+		E91FF6D828C55E2D005981A4 /* EditResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +272,12 @@
 		E91FF66A28C3F1DF005981A4 /* Edit */ = {
 			isa = PBXGroup;
 			children = (
+				E91FF6C428C49A20005981A4 /* Entity */,
+				E91FF6C228C49A20005981A4 /* Interactor */,
+				E91FF6C728C49A21005981A4 /* Presenter */,
+				E91FF6C528C49A21005981A4 /* Protocol */,
+				E91FF6CC28C49A21005981A4 /* Router */,
+				E91FF6C928C49A21005981A4 /* View */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
@@ -387,6 +407,55 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		E91FF6C228C49A20005981A4 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF6C328C49A20005981A4 /* EditViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E91FF6C428C49A20005981A4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF6D828C55E2D005981A4 /* EditResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E91FF6C528C49A21005981A4 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF6C628C49A21005981A4 /* EditProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		E91FF6C728C49A21005981A4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF6C828C49A21005981A4 /* EditViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E91FF6C928C49A21005981A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF6D428C49AA0005981A4 /* EditViewController.swift */,
+				E91FF6D528C49AA0005981A4 /* EditViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E91FF6CC28C49A21005981A4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E91FF6CD28C49A21005981A4 /* EditViewRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -497,6 +566,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91FF6D728C49AA0005981A4 /* EditViewController.xib in Resources */,
 				E91FF67D28C3F1DF005981A4 /* Main.storyboard in Resources */,
 				E91FF67B28C3F1DF005981A4 /* Assets.xcassets in Resources */,
 				E91FF6B828C4201A005981A4 /* DetailViewController.xib in Resources */,
@@ -532,22 +602,28 @@
 				E91FF67A28C3F1DF005981A4 /* RydeContactApp.xcdatamodeld in Sources */,
 				E91FF6A728C40CAA005981A4 /* ContactList.swift in Sources */,
 				E91FF67928C3F1DF005981A4 /* ViewController.swift in Sources */,
+				E91FF6CE28C49A21005981A4 /* EditViewInteractor.swift in Sources */,
 				E91FF69B28C3F331005981A4 /* BaseViewProtocol.swift in Sources */,
+				E91FF6D328C49A21005981A4 /* EditViewRouter.swift in Sources */,
 				E91FF67728C3F1DF005981A4 /* AppDelegate.swift in Sources */,
 				E91FF68128C3F28A005981A4 /* HomeInteractor.swift in Sources */,
 				E91FF6A428C4065B005981A4 /* NetworkHandler.swift in Sources */,
 				E91FF6B728C4201A005981A4 /* DetailViewController.swift in Sources */,
 				E91FF6C128C42496005981A4 /* DetailProtocol.swift in Sources */,
 				E91FF69728C3F331005981A4 /* BaseInteractorToPresenterProtocol.swift in Sources */,
+				E91FF6D028C49A21005981A4 /* EditViewPresenter.swift in Sources */,
 				E91FF69A28C3F331005981A4 /* BaseInteractorProtocol.swift in Sources */,
 				E91FF6BC28C42047005981A4 /* DetailViewPresenter.swift in Sources */,
 				E91FF69928C3F331005981A4 /* BaseRouter.swift in Sources */,
 				E91FF67828C3F1DF005981A4 /* SceneDelegate.swift in Sources */,
+				E91FF6D628C49AA0005981A4 /* EditViewController.swift in Sources */,
 				E91FF6BE28C4205B005981A4 /* DetailViewInteractor.swift in Sources */,
 				E91FF6A928C40FDE005981A4 /* CoreDatahandler.swift in Sources */,
 				E91FF6BA28C42031005981A4 /* DetailViewRouter.swift in Sources */,
+				E91FF6CF28C49A21005981A4 /* EditProtocol.swift in Sources */,
 				E91FF67F28C3F279005981A4 /* HomeRouter.swift in Sources */,
 				E91FF68528C3F2AB005981A4 /* HomePresenter.swift in Sources */,
+				E91FF6D928C55E2E005981A4 /* EditResponse.swift in Sources */,
 				E91FF6AC28C41548005981A4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,16 +21,16 @@ final class DetailViewRouter: BaseRouter {
     }
 
     // MARK: - Navigate to Detail
-    private func navigateToDetail(idString: String) {
-//        let controller = DetailsRouter(idString)
-//        navigationController?.pushRouter(controller, animated: true)
+    private func navigateToDetail(idString: Int) {
+        let editRouter = EditViewRouter(contactId: idString)
+        viewController.presentRouter(editRouter, presentationStyle: .fullScreen)
     }
 }
 
 // MARK: - Detail Presenter To Router Protocol
 extension DetailViewRouter: DetailPresenterToRouterProtocol {
-    func pushToEditScreen(contactID: String) {
-        
+    func pushToEditScreen(contactID: Int) {
+        navigateToDetail(idString: contactID)
     }
     
 }

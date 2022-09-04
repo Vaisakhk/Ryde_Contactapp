@@ -35,7 +35,13 @@ class DetailViewPresenter : DetailViewToPresenterProtocol{
         _interactor?.getContactDetails(for: _contactId)
     }
     
+    func viewWillAppear() {
+        _interactor?.getContactDetails(for: _contactId)
+    }
     
+    func didClickEditContacts() {
+        _router?.pushToEditScreen(contactID: _contactId)
+    }
 }
 
 extension DetailViewPresenter : DetailInteractorToPresenterProtocol  {

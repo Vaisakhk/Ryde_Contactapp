@@ -11,6 +11,7 @@ class DetailViewPresenter : DetailViewToPresenterProtocol{
     private var _view: DetailPresenterToViewProtocol?
     private var _router: DetailPresenterToRouterProtocol?
     private var _interactor: DetailPresenterToInteractorProtocol?
+    var presenterDelegate:DetailViewPresenterProtocol?
     
     private var _contactId: Int = 0
     var currentContact: Contact?
@@ -39,6 +40,11 @@ class DetailViewPresenter : DetailViewToPresenterProtocol{
         _interactor?.getContactDetails(for: _contactId)
     }
     
+    func viewWillDisappear() {
+        if let clDelegate = presenterDelegate {
+            clDelegate.backButtonClicked()
+        }
+    }
     func didClickEditContacts() {
         _router?.pushToEditScreen(contactID: _contactId)
     }

@@ -10,8 +10,10 @@ import Foundation
 protocol DetailViewToPresenterProtocol:BasePresenterProtocal {
     func viewDidload()
     func viewWillAppear()
+    func viewWillDisappear()
     var currentContact: Contact? { get }
     var userName: String {get}
+    var presenterDelegate:DetailViewPresenterProtocol?{get set}
     func didClickEditContacts()
 }
 
@@ -35,3 +37,6 @@ protocol DetailInteractorToPresenterProtocol:BaseInteractorToPresenterProtocol {
 }
 
 
+protocol DetailViewPresenterProtocol {
+    func backButtonClicked()
+}

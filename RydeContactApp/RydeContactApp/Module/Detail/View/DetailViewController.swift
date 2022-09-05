@@ -29,6 +29,14 @@ class DetailViewController: UIViewController {
         populateData()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        if self.isMovingFromParent {
+            presenter?.viewWillDisappear()
+        }
+    }
+    
     //MARK: - View Customization
     func customizeUI() {
         title = "Detail"
@@ -55,6 +63,7 @@ class DetailViewController: UIViewController {
     @objc func leftButtonaction() {
         presenter?.didClickEditContacts()
     }
+    
     
     
 }

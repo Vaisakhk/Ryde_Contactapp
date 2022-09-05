@@ -40,7 +40,7 @@ class HomePresenter: HomeViewToPresenterProtocol {
     
     func didClickContacts(for index: Int) {
         if let contact = contactList?[index] {
-            _router?.pushToDetailScreen(contactID: Int(contact.id))
+            _router?.pushToDetailScreen(contactID: Int(contact.id), presenterProtocol: self)
         }
     }
     
@@ -71,4 +71,10 @@ extension HomePresenter : HomeInteractorToPresenterProtocol {
         //_router?.showAlertPopup(with: errorString, title: AlertConstants.alertTitle, successButtonTitle: AlertConstants.alertOkButton)
     }
     
+}
+
+extension HomePresenter : DetailViewPresenterProtocol {
+    func backButtonClicked() {
+        _interactor?.getSavedContactDetails()
+    }
 }

@@ -9,13 +9,14 @@ import Foundation
 import UIKit
 
 final class DetailViewRouter: BaseRouter {
-    init(contactId:Int) {
+    init(contactId:Int, from homePresenter:DetailViewPresenterProtocol) {
         let view = DetailViewController(nibName: "DetailViewController", bundle: nil)
 
         super.init(viewController: view)
         let interactor: DetailPresenterToInteractorProtocol = DetailViewInteractor()
         let router: DetailPresenterToRouterProtocol = self
         let presenter: DetailViewToPresenterProtocol & DetailInteractorToPresenterProtocol = DetailViewPresenter(router: router, view: view, interactor: interactor, currentContactId: contactId)
+        presenter.presenterDelegate = homePresenter
         view.presenter = presenter
         interactor.presenter = presenter
     }

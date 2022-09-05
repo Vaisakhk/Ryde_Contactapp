@@ -25,10 +25,20 @@ final class HomeRouter: BaseRouter {
         )
         navigationController?.pushRouter(controller, animated: true)
     }
+    
+    // MARK: - Navigate to Add
+    private func navigateToAddContact(presenterProtocol:AddViewPresenterProtocol) {
+        let controller = AddViewRouter(homePresenter: presenterProtocol)
+        viewController.presentRouter(controller, presentationStyle: .fullScreen)
+    }
 }
 
 // MARK: - Home Presenter To Router Protocol
 extension HomeRouter: HomePresenterToRouterProtocol {
+    func pushToAddContactScreen(presenterProtocol:AddViewPresenterProtocol) {
+        navigateToAddContact(presenterProtocol: presenterProtocol)
+    }
+    
     func pushToDetailScreen(contactID: Int, presenterProtocol:DetailViewPresenterProtocol) {
         navigateToDetail(selectedContactId: contactID,presenterProtocol:presenterProtocol)
     }

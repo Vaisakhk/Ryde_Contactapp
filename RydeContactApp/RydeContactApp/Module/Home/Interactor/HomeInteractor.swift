@@ -16,23 +16,22 @@ class HomeInteractor: HomePresenterToInteractorProtocol {
      * Get Contact Details from server
      */
     func getContactData( for page: Int) {
-        
         networkHander.startNetworkRequest(urlString: CONTACTAPI.BASEURL + "users?per_page=10&page=\(page)", data: nil, methodType: .MethodTypeGET, completion: {[weak self] (_ result: Result<ContactList, CONTACTERROR>) in
+            guard let weakSelf = self else {
+                return
+            }
             switch result {
             case .success(let response):
-                guard let weakSelf = self else {
-                    return
-                }
                 weakSelf.processContactList(data: response.data)
                 DispatchQueue.main.async {
                     weakSelf.presenter?.contactResultData(data: weakSelf.getDataFromLocalDb(),with: response.totalPage)
                 }
                 break
-            
+                
             case .failure(let error) :
                 print(error)
                 break
- 
+                
             }
         })
     }
@@ -53,13 +52,13 @@ class HomeInteractor: HomePresenterToInteractorProtocol {
             var contact = contactData.first
             if(contact == nil ){
                 contact = coreDataHandler.newEntityForName(entityName: "Contact") as? Contact
+                contact?.id = Int32(contactResult.id)
+                contact?.email = contactResult.email
+                contact?.firstName = contactResult.firstName
+                contact?.lastName = contactResult.lastName
+                contact?.avathar = contactResult.avatar
+                coreDataHandler.saveContext()
             }
-            contact?.id = Int32(contactResult.id)
-            contact?.email = contactResult.email
-            contact?.firstName = contactResult.firstName
-            contact?.lastName = contactResult.lastName
-            contact?.avathar = contactResult.avatar
-            coreDataHandler.saveContext()
         }
     }
     

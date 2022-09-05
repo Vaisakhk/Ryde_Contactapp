@@ -50,6 +50,10 @@ class HomePresenter: HomeViewToPresenterProtocol {
             _interactor?.getContactData(for: currentPage ?? 0)
         }
     }
+    
+    func didClickAddContacts() {
+        _router?.pushToAddContactScreen(presenterProtocol: self)
+    }
 }
 
 
@@ -75,6 +79,12 @@ extension HomePresenter : HomeInteractorToPresenterProtocol {
 
 extension HomePresenter : DetailViewPresenterProtocol {
     func backButtonClicked() {
+        _interactor?.getSavedContactDetails()
+    }
+}
+
+extension HomePresenter : AddViewPresenterProtocol {
+    func contactCreatedSuccessfully() {
         _interactor?.getSavedContactDetails()
     }
 }

@@ -46,6 +46,13 @@
 		E91FF6D628C49AA0005981A4 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6D428C49AA0005981A4 /* EditViewController.swift */; };
 		E91FF6D728C49AA0005981A4 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91FF6D528C49AA0005981A4 /* EditViewController.xib */; };
 		E91FF6D928C55E2E005981A4 /* EditResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF6D828C55E2D005981A4 /* EditResponse.swift */; };
+		E9A0944028C62C7F00776F3A /* AddResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0943428C62C7F00776F3A /* AddResponse.swift */; };
+		E9A0944128C62C7F00776F3A /* AddProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0943628C62C7F00776F3A /* AddProtocol.swift */; };
+		E9A0944228C62C7F00776F3A /* AddViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0943828C62C7F00776F3A /* AddViewPresenter.swift */; };
+		E9A0944328C62C7F00776F3A /* AddViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0943A28C62C7F00776F3A /* AddViewInteractor.swift */; };
+		E9A0944428C62C7F00776F3A /* AddViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0943C28C62C7F00776F3A /* AddViewRouter.swift */; };
+		E9A0944528C62C7F00776F3A /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9A0943E28C62C7F00776F3A /* AddViewController.xib */; };
+		E9A0944628C62C7F00776F3A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0943F28C62C7F00776F3A /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +115,13 @@
 		E91FF6D428C49AA0005981A4 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		E91FF6D528C49AA0005981A4 /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
 		E91FF6D828C55E2D005981A4 /* EditResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditResponse.swift; sourceTree = "<group>"; };
+		E9A0943428C62C7F00776F3A /* AddResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddResponse.swift; sourceTree = "<group>"; };
+		E9A0943628C62C7F00776F3A /* AddProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProtocol.swift; sourceTree = "<group>"; };
+		E9A0943828C62C7F00776F3A /* AddViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewPresenter.swift; sourceTree = "<group>"; };
+		E9A0943A28C62C7F00776F3A /* AddViewInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewInteractor.swift; sourceTree = "<group>"; };
+		E9A0943C28C62C7F00776F3A /* AddViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewRouter.swift; sourceTree = "<group>"; };
+		E9A0943E28C62C7F00776F3A /* AddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
+		E9A0943F28C62C7F00776F3A /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +312,12 @@
 		E91FF66C28C3F1DF005981A4 /* Add */ = {
 			isa = PBXGroup;
 			children = (
+				E9A0943328C62C7F00776F3A /* Entity */,
+				E9A0943928C62C7F00776F3A /* Interactor */,
+				E9A0943728C62C7F00776F3A /* Presenter */,
+				E9A0943528C62C7F00776F3A /* Protocol */,
+				E9A0943B28C62C7F00776F3A /* Router */,
+				E9A0943D28C62C7F00776F3A /* View */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -456,6 +476,55 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		E9A0943328C62C7F00776F3A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E9A0943428C62C7F00776F3A /* AddResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E9A0943528C62C7F00776F3A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E9A0943628C62C7F00776F3A /* AddProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		E9A0943728C62C7F00776F3A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E9A0943828C62C7F00776F3A /* AddViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E9A0943928C62C7F00776F3A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E9A0943A28C62C7F00776F3A /* AddViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E9A0943B28C62C7F00776F3A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E9A0943C28C62C7F00776F3A /* AddViewRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E9A0943D28C62C7F00776F3A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9A0943F28C62C7F00776F3A /* AddViewController.swift */,
+				E9A0943E28C62C7F00776F3A /* AddViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -572,6 +641,7 @@
 				E91FF6B828C4201A005981A4 /* DetailViewController.xib in Resources */,
 				E91FF6A128C40202005981A4 /* HomeTableViewCell.xib in Resources */,
 				E91FF67C28C3F1DF005981A4 /* LaunchScreen.storyboard in Resources */,
+				E9A0944528C62C7F00776F3A /* AddViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,15 +674,21 @@
 				E91FF67928C3F1DF005981A4 /* ViewController.swift in Sources */,
 				E91FF6CE28C49A21005981A4 /* EditViewInteractor.swift in Sources */,
 				E91FF69B28C3F331005981A4 /* BaseViewProtocol.swift in Sources */,
+				E9A0944028C62C7F00776F3A /* AddResponse.swift in Sources */,
 				E91FF6D328C49A21005981A4 /* EditViewRouter.swift in Sources */,
 				E91FF67728C3F1DF005981A4 /* AppDelegate.swift in Sources */,
+				E9A0944428C62C7F00776F3A /* AddViewRouter.swift in Sources */,
+				E9A0944228C62C7F00776F3A /* AddViewPresenter.swift in Sources */,
 				E91FF68128C3F28A005981A4 /* HomeInteractor.swift in Sources */,
 				E91FF6A428C4065B005981A4 /* NetworkHandler.swift in Sources */,
 				E91FF6B728C4201A005981A4 /* DetailViewController.swift in Sources */,
+				E9A0944328C62C7F00776F3A /* AddViewInteractor.swift in Sources */,
 				E91FF6C128C42496005981A4 /* DetailProtocol.swift in Sources */,
 				E91FF69728C3F331005981A4 /* BaseInteractorToPresenterProtocol.swift in Sources */,
 				E91FF6D028C49A21005981A4 /* EditViewPresenter.swift in Sources */,
+				E9A0944628C62C7F00776F3A /* AddViewController.swift in Sources */,
 				E91FF69A28C3F331005981A4 /* BaseInteractorProtocol.swift in Sources */,
+				E9A0944128C62C7F00776F3A /* AddProtocol.swift in Sources */,
 				E91FF6BC28C42047005981A4 /* DetailViewPresenter.swift in Sources */,
 				E91FF69928C3F331005981A4 /* BaseRouter.swift in Sources */,
 				E91FF67828C3F1DF005981A4 /* SceneDelegate.swift in Sources */,

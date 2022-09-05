@@ -10,6 +10,7 @@ import Foundation
 protocol HomeViewToPresenterProtocol:BasePresenterProtocal {
     func viewDidload()
     func didClickContacts(for index: Int)
+    func didClickAddContacts()
     func reachedBottomOftheScroll(with index: Int)
     var contactList: [Contact]? { get }
     var currentPage: Int? { get }
@@ -29,6 +30,7 @@ protocol HomePresenterToInteractorProtocol:BaseInteractorProtocol {
 
 protocol HomePresenterToRouterProtocol:RouterProtocal {
     func pushToDetailScreen(contactID: Int, presenterProtocol:DetailViewPresenterProtocol)
+    func pushToAddContactScreen(presenterProtocol:AddViewPresenterProtocol) 
 }
 
 protocol HomeInteractorToPresenterProtocol:BaseInteractorToPresenterProtocol {

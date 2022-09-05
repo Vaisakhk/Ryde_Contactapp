@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     }
     
     @objc func leftButtonaction() {
-       
+        presenter?.didClickAddContacts()
     }
     
 }

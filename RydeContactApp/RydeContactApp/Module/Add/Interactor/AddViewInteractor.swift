@@ -16,11 +16,11 @@ class AddViewInteractor: AddPresenterToInteractorProtocol {
     func updateCandidateDetails( firstName:String?, lastName:String? ,mobile:String?, email:String?){
         guard let tempFirstName = firstName ,let tempLastName = lastName
         else {
-            presenter?.contactValidationFailed()
+            presenter?.contactValidationFailed(message: "First name and last name can't be empty")
             return
         }
         if(tempFirstName.isEmpty || tempLastName.isEmpty) {
-            presenter?.contactValidationFailed()
+            presenter?.contactValidationFailed(message: "First name and last name can't be empty")
         }else {
         let contactId = getLastContactID() + 1
         var requestData:[String:String] = [:]
@@ -47,10 +47,6 @@ class AddViewInteractor: AddPresenterToInteractorProtocol {
         }
         
     }
-    
-    fileprivate func validateInputs(firstName:String?, lastName:String?) {
-    }
-    
     
     /*
      * Save Api response to local Db

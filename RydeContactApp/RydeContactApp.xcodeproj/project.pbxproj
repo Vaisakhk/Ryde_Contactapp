@@ -53,6 +53,11 @@
 		E9A0944428C62C7F00776F3A /* AddViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0943C28C62C7F00776F3A /* AddViewRouter.swift */; };
 		E9A0944528C62C7F00776F3A /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9A0943E28C62C7F00776F3A /* AddViewController.xib */; };
 		E9A0944628C62C7F00776F3A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0943F28C62C7F00776F3A /* AddViewController.swift */; };
+		E9A0944828C63E4800776F3A /* HomeInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0944728C63E4800776F3A /* HomeInteractorTest.swift */; };
+		E9A0944A28C642B300776F3A /* DetailInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0944928C642B300776F3A /* DetailInteractorTest.swift */; };
+		E9A0944C28C6447800776F3A /* EditInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0944B28C6447800776F3A /* EditInteractorTest.swift */; };
+		E9A094B828C78DC900776F3A /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = E9A094B728C78DC900776F3A /* PKHUD */; };
+		E9A094BA28C78EEC00776F3A /* AddInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A094B928C78EEC00776F3A /* AddInteractorTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +127,10 @@
 		E9A0943C28C62C7F00776F3A /* AddViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewRouter.swift; sourceTree = "<group>"; };
 		E9A0943E28C62C7F00776F3A /* AddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
 		E9A0943F28C62C7F00776F3A /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		E9A0944728C63E4800776F3A /* HomeInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTest.swift; sourceTree = "<group>"; };
+		E9A0944928C642B300776F3A /* DetailInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractorTest.swift; sourceTree = "<group>"; };
+		E9A0944B28C6447800776F3A /* EditInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInteractorTest.swift; sourceTree = "<group>"; };
+		E9A094B928C78EEC00776F3A /* AddInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInteractorTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E91FF6AF28C41C0F005981A4 /* SDWebImage in Frameworks */,
+				E9A094B828C78DC900776F3A /* PKHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +196,10 @@
 			isa = PBXGroup;
 			children = (
 				E91FF64528C3F153005981A4 /* RydeContactAppTests.swift */,
+				E9A0944728C63E4800776F3A /* HomeInteractorTest.swift */,
+				E9A0944928C642B300776F3A /* DetailInteractorTest.swift */,
+				E9A0944B28C6447800776F3A /* EditInteractorTest.swift */,
+				E9A094B928C78EEC00776F3A /* AddInteractorTest.swift */,
 			);
 			path = RydeContactAppTests;
 			sourceTree = "<group>";
@@ -543,6 +557,7 @@
 			name = RydeContactApp;
 			packageProductDependencies = (
 				E91FF6AE28C41C0F005981A4 /* SDWebImage */,
+				E9A094B728C78DC900776F3A /* PKHUD */,
 			);
 			productName = RydeContactApp;
 			productReference = E91FF62828C3F14F005981A4 /* RydeContactApp.app */;
@@ -618,6 +633,7 @@
 			mainGroup = E91FF61F28C3F14F005981A4;
 			packageReferences = (
 				E91FF6AD28C41C0F005981A4 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				E9A094B628C78DC900776F3A /* XCRemoteSwiftPackageReference "PKHUD" */,
 			);
 			productRefGroup = E91FF62928C3F14F005981A4 /* Products */;
 			projectDirPath = "";
@@ -708,7 +724,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A0944C28C6447800776F3A /* EditInteractorTest.swift in Sources */,
+				E9A0944A28C642B300776F3A /* DetailInteractorTest.swift in Sources */,
+				E9A094BA28C78EEC00776F3A /* AddInteractorTest.swift in Sources */,
 				E91FF64628C3F153005981A4 /* RydeContactAppTests.swift in Sources */,
+				E9A0944828C63E4800776F3A /* HomeInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1052,6 +1072,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		E9A094B628C78DC900776F3A /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1059,6 +1087,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E91FF6AD28C41C0F005981A4 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		E9A094B728C78DC900776F3A /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9A094B628C78DC900776F3A /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -30,19 +30,17 @@ class EditViewInteractor: EditPresenterToInteractorProtocol {
         requestData["first_name"] = firstName
         requestData["last_name"] = tempLastName
         networkHander.startNetworkRequest(urlString: CONTACTAPI.BASEURL + "users/\(contactId)", data: requestData, methodType: .MethodTypePUT) { [weak self](_ result: Result<EditResponse, CONTACTERROR>) in
+            guard let weakSelf = self else {
+                return
+            }
             switch result {
-            case .success(let response):
-                guard let weakSelf = self else {
-                    return
-                }
-                print(response)
+            case .success(_):
                 weakSelf.updateContact(firstName: tempFirstName, lastName: tempLastName, contactId: contactId)
                 break
-            
+                
             case .failure(let error) :
-                print(error)
+                weakSelf.presenter?.contactResultFailed(message: error.errorMessage())
                 break
- 
             }
         }
         

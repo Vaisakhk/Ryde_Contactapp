@@ -29,7 +29,7 @@ protocol AddPresenterToRouterProtocol:RouterProtocal {
 }
 
 protocol AddInteractorToPresenterProtocol:BaseInteractorToPresenterProtocol {
-    func contactValidationFailed()
+    func contactValidationFailed(message:String)
     func contactResult(data: Contact, from isAdding:Bool)
 }
 

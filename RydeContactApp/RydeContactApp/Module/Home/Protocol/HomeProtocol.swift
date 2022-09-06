@@ -18,8 +18,8 @@ protocol HomeViewToPresenterProtocol:BasePresenterProtocal {
 
 protocol HomePresenterToViewProtocol:BaseViewProtocol {
     func refreshTableView()
-    func hideEmptyView()
-    func showEmptyView()
+    func showProgressView()
+    func hideProgressView()
 }
 
 protocol HomePresenterToInteractorProtocol:BaseInteractorProtocol {

@@ -49,8 +49,8 @@ extension AddViewPresenter : AddInteractorToPresenterProtocol  {
         }
     }
     
-    func contactValidationFailed() {
-        _router?.showAlertPopup(with: "First name and last name can't be empty", title: " Contact App ", successButtonTitle: "Ok", successBlock: {  isSuccess in
+    func contactValidationFailed(message:String) {
+        _router?.showAlertPopup(with: message, title: " Contact App ", successButtonTitle: "Ok", successBlock: {  isSuccess in
            
         })
     }

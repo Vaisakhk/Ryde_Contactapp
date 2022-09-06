@@ -31,6 +31,7 @@ protocol EditPresenterToRouterProtocol:RouterProtocal {
 
 protocol EditInteractorToPresenterProtocol:BaseInteractorToPresenterProtocol {
     func contactResult(data: Contact, from isEditing:Bool)
+    func contactResultFailed(message: String)
 }
 
 

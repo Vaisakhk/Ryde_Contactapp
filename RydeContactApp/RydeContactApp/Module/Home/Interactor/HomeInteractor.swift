@@ -29,7 +29,7 @@ class HomeInteractor: HomePresenterToInteractorProtocol {
                 break
                 
             case .failure(let error) :
-                print(error)
+                weakSelf.presenter?.contactFetchFailedWithError(errorString: error.errorMessage())
                 break
                 
             }

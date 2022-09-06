@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PKHUD
 
 class ViewController: UIViewController {
     var presenter: HomeViewToPresenterProtocol?
@@ -58,12 +59,12 @@ extension ViewController : HomePresenterToViewProtocol {
         tableView.reloadData()
     }
     
-    func hideEmptyView() {
-        
+    func showProgressView() {
+        showSpinner()
     }
     
-    func showEmptyView() {
-        
+    func hideProgressView() {
+        hideSpinner()
     }
 }
 
@@ -97,5 +98,17 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.didClickContacts(for: indexPath.row)
+    }
+}
+
+
+extension UIViewController {
+    @objc func showSpinner() {
+        PKHUD.sharedHUD.contentView = PKHUDProgressView()
+        PKHUD.sharedHUD.show()
+    }
+    
+    @objc func hideSpinner() {
+        PKHUD.sharedHUD.hide()
     }
 }

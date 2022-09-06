@@ -35,6 +35,7 @@ class HomePresenter: HomeViewToPresenterProtocol {
     
     func viewDidload() {
         _interactor?.getSavedContactDetails()
+        _view?.showProgressView()
         _interactor?.getContactData(for: currentPage ?? 0)
     }
     
@@ -47,6 +48,7 @@ class HomePresenter: HomeViewToPresenterProtocol {
     func reachedBottomOftheScroll(with index: Int) {
         if index == (contactList?.count ?? 0) - 1 && _totalPage > currentPage ?? 0 {
             currentPage = (currentPage ?? 0) + 1
+            _view?.showProgressView()
             _interactor?.getContactData(for: currentPage ?? 0)
         }
     }
@@ -59,19 +61,18 @@ class HomePresenter: HomeViewToPresenterProtocol {
 
 extension HomePresenter : HomeInteractorToPresenterProtocol {
     func contactResultData(data: [Contact], with totalPages: Int) {
+        _view?.hideProgressView()
         contactList = data
         if data.count == 0 {
             _totalPage = 1
             _router?.showAlertPopup(with: AlertConstants.noDataFound, title: AlertConstants.alertTitle, successButtonTitle: AlertConstants.alertTitle)
-            _view?.showEmptyView()
         } else {
             _totalPage = totalPages
-            _view?.hideEmptyView()
         }
     }
     
     func contactFetchFailedWithError(errorString: String) {
-        _view?.showEmptyView()
+        _view?.showProgressView()
         //_router?.showAlertPopup(with: errorString, title: AlertConstants.alertTitle, successButtonTitle: AlertConstants.alertOkButton)
     }
     

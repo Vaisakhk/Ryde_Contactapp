@@ -54,4 +54,10 @@ extension AddViewPresenter : AddInteractorToPresenterProtocol  {
            
         })
     }
+    
+    func contactResultFailed(message:String) {
+        _router?.showAlertPopup(with: message, title: " Contact App ", successButtonTitle: "Ok", successBlock: {  isSuccess in
+           
+        })
+    }
 }

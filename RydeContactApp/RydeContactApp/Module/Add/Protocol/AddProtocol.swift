@@ -31,6 +31,7 @@ protocol AddPresenterToRouterProtocol:RouterProtocal {
 protocol AddInteractorToPresenterProtocol:BaseInteractorToPresenterProtocol {
     func contactValidationFailed(message:String)
     func contactResult(data: Contact, from isAdding:Bool)
+    func contactResultFailed(message:String)
 }
 
 

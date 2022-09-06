@@ -27,10 +27,21 @@ class AddInteractorTest: XCTestCase {
         sut?.updateCandidateDetails(firstName: "Test", lastName: "Test", mobile: "", email: "")
     }
 
+    func testUpdateCandidateDetailsWithNil() {
+        sut?.updateCandidateDetails(firstName: nil, lastName: nil, mobile: "", email: "")
+    }
+    
+    func testUpdateCandidateDetailsWithEmpty() {
+        sut?.updateCandidateDetails(firstName: "", lastName: "", mobile: "", email: "")
+    }
 }
 
 // MARK: - Mock up Add interactor to presenter protocol
 class FakeAddInteractionToPresenter: AddInteractorToPresenterProtocol {
+    func contactResultFailed(message: String) {
+        XCTAssertNotNil(message, "Contact add error Message is Nil")
+    }
+    
     func contactResult(data: Contact, from isAdding: Bool) {
         XCTAssertNotNil(data, "Contact Add result is Nil")
     }

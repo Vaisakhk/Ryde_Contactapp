@@ -10,7 +10,7 @@
      - iOS 15.0 and above
      - Xcode Version 13.4.1
      
-### Assemptions
+### Assumptions
      - While editing and adding new contact no need to capture and save user profile image, email and phone number
      - Once new contact added it will list at the bottom of the table view
      
@@ -36,7 +36,7 @@
     
     - Add contact screen
         - Contact details such as first name and last name captured and saved in Api and local db
-        - And populated same in Home lsiting screen
+        - And populated same in Home listing screen
         
     - Test cases
         - Test cases for Home, detail, Edit and add contact interactor added 

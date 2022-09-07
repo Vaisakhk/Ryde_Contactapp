@@ -65,7 +65,6 @@ extension HomePresenter : HomeInteractorToPresenterProtocol {
         contactList = data
         if data.count == 0 {
             _totalPage = 1
-            _router?.showAlertPopup(with: AlertConstants.noDataFound, title: AlertConstants.alertTitle, successButtonTitle: AlertConstants.alertTitle)
         } else {
             _totalPage = totalPages
         }
@@ -73,7 +72,6 @@ extension HomePresenter : HomeInteractorToPresenterProtocol {
     
     func contactFetchFailedWithError(errorString: String) {
         _view?.showProgressView()
-        //_router?.showAlertPopup(with: errorString, title: AlertConstants.alertTitle, successButtonTitle: AlertConstants.alertOkButton)
     }
     
 }

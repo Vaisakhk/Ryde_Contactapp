@@ -16,6 +16,18 @@ class HomeInteractorTest: XCTestCase {
         mockPresenter = FakeHomeInteractionToPresenter()
         sut = HomeInteractor()
         sut?.presenter = mockPresenter
+        
+        let networkHandler = NetworkHandler.sharedHandler
+        let fileHandler = FileHandler.sharedHandler
+        let url = URL(string: "https://reqres.in/api/users?per_page=10&page=0")
+        let invalidUrl = URL(string: "https://reqres.in/api/users?per_page=10&page=100")
+        NetworkURLSessionMock.testURLs = [url: fileHandler.getDataFromFile(name: "Contact"), invalidUrl:fileHandler.getDataFromFile(name: "Contact_invalid")]
+        let config = URLSessionConfiguration.ephemeral
+        config.protocolClasses = [NetworkURLSessionMock.self]
+        let session = URLSession(configuration: config)
+        networkHandler.defaultSession = session
+        sut?.networkHander = networkHandler
+        
     }
 
     override func tearDownWithError() throws {
@@ -25,6 +37,10 @@ class HomeInteractorTest: XCTestCase {
 
     func testGetContactData() {
         sut?.getContactData(for: 0)
+    }
+    
+    func testGetContactInvalidData() {
+        sut?.getContactData(for: 100)
     }
     
     func testGetSavedContactDetails() {

@@ -15,6 +15,17 @@ class EditInteractorTest: XCTestCase {
         mockPresenter = FakeEditInteractionToPresenter()
         sut = EditViewInteractor()
         sut?.presenter = mockPresenter
+        
+        let networkHandler = NetworkHandler.sharedHandler
+        let fileHandler = FileHandler.sharedHandler
+        let url = URL(string: "https://reqres.in/api/users/700")
+        NetworkURLSessionMock.testURLs = [url: fileHandler.getDataFromFile(name: "MockEditResponse")]
+        let config = URLSessionConfiguration.ephemeral
+        config.protocolClasses = [NetworkURLSessionMock.self]
+        let session = URLSession(configuration: config)
+        networkHandler.defaultSession = session
+        sut?.networkHander = networkHandler
+        
     }
 
     override func tearDownWithError() throws {

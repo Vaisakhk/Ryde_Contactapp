@@ -32,13 +32,27 @@ class DetailViewPresenter : DetailViewToPresenterProtocol{
         _contactId = currentContactId
     }
     
+    /*
+     * View didload Called when Controller viewdidload is called
+     * Input          : NA
+     */
     func viewDidload() {
         _interactor?.getContactDetails(for: _contactId)
     }
     
+    /*
+     * View will appear Called when Controller viewdidload is called
+     * Input          : NA
+     */
+    
     func viewWillAppear() {
         _interactor?.getContactDetails(for: _contactId)
     }
+    
+    /*
+     * View will disappear Called when Controller viewdidload is called
+     * Input          : NA
+     */
     
     func viewWillDisappear() {
         if let clDelegate = presenterDelegate {

@@ -33,17 +33,34 @@ class HomePresenter: HomeViewToPresenterProtocol {
         _interactor = interactor
     }
     
+    /*
+     * View didload Called when Controller viewdidload is called
+     * Input          : NA
+     */
+    
     func viewDidload() {
         _interactor?.getSavedContactDetails()
         _view?.showProgressView()
         _interactor?.getContactData(for: currentPage ?? 0)
     }
     
+    /*
+     * Did click contact from view
+     * Input          :
+     *                index    :- index of the selected contact
+     */
+    
     func didClickContacts(for index: Int) {
         if let contact = contactList?[index] {
             _router?.pushToDetailScreen(contactID: Int(contact.id), presenterProtocol: self)
         }
     }
+    
+    /*
+     * Once reached bottom of the table view
+     * Input          :
+     *                index    :- index of the last item in UI
+     */
     
     func reachedBottomOftheScroll(with index: Int) {
         if index == (contactList?.count ?? 0) - 1 && _totalPage > currentPage ?? 0 {
@@ -52,6 +69,12 @@ class HomePresenter: HomeViewToPresenterProtocol {
             _interactor?.getContactData(for: currentPage ?? 0)
         }
     }
+    
+    /*
+     * Did click Addcontact from view
+     * Input          : NA
+     *
+     */
     
     func didClickAddContacts() {
         _router?.pushToAddContactScreen(presenterProtocol: self)

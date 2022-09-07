@@ -12,7 +12,14 @@ class AddViewInteractor: AddPresenterToInteractorProtocol {
     let coreDataHandler = CoreDataHandler.sharedInstance
     var networkHander:NetworkHandler = NetworkHandler.sharedHandler
     
-    
+    /*
+     * TO add Contact details
+     * Input          :
+     *                firstName :- firstName need to update
+     *                lastName  :- lastName need to update
+     *                mobile    :- mobile need to update
+     *                email     :- email need to update
+     */
     func updateCandidateDetails( firstName:String?, lastName:String? ,mobile:String?, email:String?){
         guard let tempFirstName = firstName ,let tempLastName = lastName
         else {
@@ -49,6 +56,10 @@ class AddViewInteractor: AddPresenterToInteractorProtocol {
     
     /*
      * Save Api response to local Db
+     * Input          :
+     *                firstName :- firstName need to update
+     *                lastName  :- lastName need to update
+     *                contactId :-  Contact id need to be updated
      */
     fileprivate func updateContact ( firstName:String, lastName:String, contactId:Int) {
         let contact = coreDataHandler.newEntityForName(entityName: "Contact") as? Contact
@@ -63,6 +74,12 @@ class AddViewInteractor: AddPresenterToInteractorProtocol {
         }
     }
     
+    /*
+     * To get last contact id
+     * Input          : NA
+     * Output         : Int value of last contact id
+     *
+     */
     fileprivate func getLastContactID() -> Int {
        let contacts =  coreDataHandler.getAllDatasWithPredicate(entity: "Contact", predicate: nil, sortDescriptor: NSSortDescriptor(key: "id", ascending: true)) as? [Contact] ?? []
         return contacts.count != 0 ? Int(contacts.last?.id ?? 1) : 1

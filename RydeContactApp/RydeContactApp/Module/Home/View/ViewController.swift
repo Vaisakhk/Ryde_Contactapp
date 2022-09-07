@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     
     /*
      * View Customization
+     * Input          : NA
      */
     func customizeUI() {
         title = "Contact"
@@ -35,30 +36,47 @@ class ViewController: UIViewController {
         tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
     }
     
+    /*
+     * To add custom right button
+     * Input          : NA
+     *
+     */
     func addRightBarButtonCustom() {
         let barButton = UIBarButtonItem(title: "Groups", style: .done, target: self, action: #selector(self.backButtonaction))
         self.navigationItem.leftBarButtonItem = barButton
     }
     
+    /*
+     * To add custom Left button
+     * Input          : NA
+     *
+     */
     func addLeftBarButtonCustom() {
-        let barButton = UIBarButtonItem(title: "Plus", style: .done, target: self, action: #selector(self.leftButtonaction))
+        let barButton = UIBarButtonItem(image: UIImage(named: "plusIcon"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.leftButtonaction))
         self.navigationItem.rightBarButtonItem = barButton
     }
     
     /*
-     * View Actions
+     * To handle Back button action
+     * Input          : NA
+     *
      */
     @objc func backButtonaction() {
        
     }
     
+    /*
+     * To handle left button action
+     * Input          : NA
+     *
+     */
     @objc func leftButtonaction() {
         presenter?.didClickAddContacts()
     }
     
 }
 
-//MARK:- Hisory Presenter To view Protocol
+//MARK: - Home Presenter To view Protocol
 
 extension ViewController : HomePresenterToViewProtocol {
     func refreshTableView() {
@@ -75,7 +93,7 @@ extension ViewController : HomePresenterToViewProtocol {
 }
 
 
-//MARK:- Table View Delegate and Datasource
+//MARK: - Table View Delegate and Datasource
 
 extension ViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -107,6 +125,7 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource {
     }
 }
 
+//MARK: - View controller extension to show progress hud
 
 extension UIViewController {
     @objc func showSpinner() {

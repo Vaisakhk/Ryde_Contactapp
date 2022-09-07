@@ -26,9 +26,22 @@ class AddViewPresenter : AddViewToPresenterProtocol{
         _interactor = interactor
     }
     
+    /*
+     * View didload Called when Controller viewdidload is called
+     * Input          : NA
+     */
     func viewDidload() {
 
     }
+    
+    /*
+     * TO add Contact details
+     * Input          :
+     *                firstName :- firstName need to update
+     *                lastName  :- lastName need to update
+     *                mobile    :- mobile need to update
+     *                email     :- email need to update
+     */
     
     func updateCandidateDetails(with firstName:String?, lastName:String? ,mobile:String?, email:String?) {
         _interactor?.updateCandidateDetails( firstName: firstName, lastName: lastName, mobile: mobile, email: email)

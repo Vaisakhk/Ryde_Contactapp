@@ -63,6 +63,7 @@
 		E9A0944C28C6447800776F3A /* EditInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0944B28C6447800776F3A /* EditInteractorTest.swift */; };
 		E9A094B828C78DC900776F3A /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = E9A094B728C78DC900776F3A /* PKHUD */; };
 		E9A094BA28C78EEC00776F3A /* AddInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A094B928C78EEC00776F3A /* AddInteractorTest.swift */; };
+		E9EE9DB228C9036E0088B7CE /* MockEditResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E9EE9DB128C9036E0088B7CE /* MockEditResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +142,7 @@
 		E9A0944928C642B300776F3A /* DetailInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractorTest.swift; sourceTree = "<group>"; };
 		E9A0944B28C6447800776F3A /* EditInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInteractorTest.swift; sourceTree = "<group>"; };
 		E9A094B928C78EEC00776F3A /* AddInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInteractorTest.swift; sourceTree = "<group>"; };
+		E9EE9DB128C9036E0088B7CE /* MockEditResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockEditResponse.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 		E917EB1E28C8E0FA00F39E57 /* MockJson */ = {
 			isa = PBXGroup;
 			children = (
+				E9EE9DB128C9036E0088B7CE /* MockEditResponse.json */,
 				E917EB2628C8E55300F39E57 /* Contact_invalid.json */,
 				E917EB1F28C8E0FA00F39E57 /* Contact.json */,
 			);
@@ -704,6 +707,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9EE9DB228C9036E0088B7CE /* MockEditResponse.json in Resources */,
 				E917EB2728C8E55300F39E57 /* Contact_invalid.json in Resources */,
 				E917EB2028C8E0FA00F39E57 /* Contact.json in Resources */,
 			);

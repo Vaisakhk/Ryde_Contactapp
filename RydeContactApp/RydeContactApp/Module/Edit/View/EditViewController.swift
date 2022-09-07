@@ -25,7 +25,10 @@ class EditViewController: UIViewController {
         populateData()
     }
 
-    //MARK: - View Customization
+    /*
+     * View Customization
+     * Input          : NA
+     */
     func customizeUI() {
         title = "Edit Contact"
         addRightBarButtonCustom()
@@ -36,17 +39,31 @@ class EditViewController: UIViewController {
         
     }
     
+    /*
+     * To handle Back button action
+     * Input          : NA
+     *
+     */
     func addRightBarButtonCustom() {
         let barButton = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(self.backButtonaction))
         self.navigationItem.leftBarButtonItem = barButton
     }
     
+    /*
+     * To handle left button action
+     * Input          : NA
+     *
+     */
     func addLeftBarButtonCustom() {
         let barButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.leftButtonaction))
         self.navigationItem.rightBarButtonItem = barButton
     }
     
-    //MARK: - Populate Data
+    /*
+     * To Pre populate Data in UI
+     * Input          : NA
+     *
+     */
     func populateData() {
         emailTextField.text = presenter?.currentContact?.email ?? ""
         firstNameTextField.text = presenter?.currentContact?.firstName
@@ -57,20 +74,27 @@ class EditViewController: UIViewController {
         }
     }
     
-    //MARK: - UIView Actions
+    /*
+     * To handle Back button action
+     * Input          : NA
+     *
+     */
     @objc func backButtonaction() {
         self.dismiss(animated: true)
     }
     
+    /*
+     * To handle left button action
+     * Input          : NA
+     *
+     */
+    
     @objc func leftButtonaction() {
         presenter?.updateCandidateDetails(with: firstNameTextField.text, lastName: lastNameTextField.text, mobile: mobileTextField.text, email: emailTextField.text)
     }
-    
-    @IBAction func tapGuestureAction(_ sender: Any) {
-        
-    }
 }
 
+//MARK: - Edit Presenter To view Protocol
 extension EditViewController : EditPresenterToViewProtocol {
     func refreshView() {
         populateData()

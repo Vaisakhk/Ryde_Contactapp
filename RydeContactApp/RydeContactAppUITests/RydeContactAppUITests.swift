@@ -31,7 +31,7 @@ class RydeContactAppUITests: XCTestCase {
         XCTAssert(groupsButton.exists, "Group button not exists" )
         XCTAssert(groupsButton.isEnabled, "User interaction not enabled for Group button" )
         groupsButton.tap()
-        let plusButton = contactNavigationBar.buttons["Plus"]
+        let plusButton = contactNavigationBar.buttons["plusIcon"]
         plusButton.tap()
         XCTAssert(plusButton.exists, "Plus button not exists" )
         XCTAssert(plusButton.isEnabled, "User interaction not enabled for Plus button" )
@@ -50,7 +50,7 @@ class RydeContactAppUITests: XCTestCase {
         let contactNavigationBar = app.navigationBars["Contact"]
         let groupsButton = contactNavigationBar.buttons["Groups"]
         groupsButton.tap()
-        let plusButton = contactNavigationBar.buttons["Plus"]
+        let plusButton = contactNavigationBar.buttons["plusIcon"]
         plusButton.tap()
         let addContactNavigationBar = app.navigationBars["Add Contact"]
         XCTAssert(addContactNavigationBar.exists, "Not navigated to Add Contact Screen" )
@@ -66,7 +66,7 @@ class RydeContactAppUITests: XCTestCase {
     
     func testAddViewNavigationBar() {
         let contactNavigationBar = app.navigationBars["Contact"]
-        let plusButton = contactNavigationBar.buttons["Plus"]
+        let plusButton = contactNavigationBar.buttons["plusIcon"]
         plusButton.tap()
         let addContactNavigationBar = app.navigationBars["Add Contact"]
         

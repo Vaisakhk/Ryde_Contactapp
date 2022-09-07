@@ -14,6 +14,8 @@ class HomeInteractor: HomePresenterToInteractorProtocol {
     
     /*
      * Get Contact Details from server
+     * Input   :
+     *         page :- Page that need to be fetched from api
      */
     func getContactData( for page: Int) {
         networkHander.startNetworkRequest(urlString: CONTACTAPI.BASEURL + "users?per_page=10&page=\(page)", data: nil, methodType: .MethodTypeGET, completion: {[weak self] (_ result: Result<ContactList, CONTACTERROR>) in
@@ -38,6 +40,7 @@ class HomeInteractor: HomePresenterToInteractorProtocol {
     
     /*
      * Get All Saved Data Initially
+     * Input          : NA
      */
     func getSavedContactDetails() {
         presenter?.contactResultData(data: getDataFromLocalDb(),with: 0)
@@ -45,7 +48,10 @@ class HomeInteractor: HomePresenterToInteractorProtocol {
     
     /*
      * Save Api response to local Db
+     * Input          :
+     *                data :- List of contact result that need to be saved in db
      */
+    
     fileprivate func processContactList (data: [ContactResult]) {
         for contactResult in data {
             let contactData:[Contact] = self.coreDataHandler.getAllDatasWithPredicate(entity: "Contact", predicate: NSPredicate(format: "(id == %d)", contactResult.id), sortDescriptor: NSSortDescriptor(key: "firstName", ascending: true)) as? [Contact] ?? []
@@ -64,6 +70,7 @@ class HomeInteractor: HomePresenterToInteractorProtocol {
     
     /*
      * Fetch data from local Db
+     * Input          : NA
      */
     fileprivate func getDataFromLocalDb() -> [Contact] {
         coreDataHandler.getAllDatas(entity: "Contact")  as? [Contact] ?? []

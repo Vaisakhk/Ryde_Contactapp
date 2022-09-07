@@ -21,7 +21,11 @@ final class DetailViewRouter: BaseRouter {
         interactor.presenter = presenter
     }
 
-    // MARK: - Navigate to Detail
+    /*
+     * To Dismiss Edit View
+     * Input          :
+     *                idString : Contact id that need to inject to edit screen
+     */
     private func navigateToDetail(idString: Int) {
         let editRouter = EditViewRouter(contactId: idString)
         viewController.presentRouter(editRouter, presentationStyle: .fullScreen)

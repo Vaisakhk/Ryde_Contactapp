@@ -19,14 +19,22 @@ final class HomeRouter: BaseRouter {
         interactor.presenter = presenter
     }
 
-    // MARK: - Navigate to Detail
+    /*
+     * Navigate to detail contact controller
+     * Input          :
+     *                presenterProtocol :- To handle back button action from detail view controller
+     */
     private func navigateToDetail(selectedContactId: Int,presenterProtocol:DetailViewPresenterProtocol) {
         let controller = DetailViewRouter(contactId: selectedContactId, from: presenterProtocol
         )
         navigationController?.pushRouter(controller, animated: true)
     }
     
-    // MARK: - Navigate to Add
+    /*
+     * Navigate to Add contact controller
+     * Input          :
+     *                presenterProtocol :- To handle back button action from add view controller
+     */
     private func navigateToAddContact(presenterProtocol:AddViewPresenterProtocol) {
         let controller = AddViewRouter(homePresenter: presenterProtocol)
         viewController.presentRouter(controller, presentationStyle: .fullScreen)

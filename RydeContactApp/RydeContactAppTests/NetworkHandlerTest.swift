@@ -72,5 +72,30 @@ class NetworkHandlerTest: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
 
+    func testInvalidURL() {
+        let expectation = XCTestExpectation(description: "expectation that network request will succeed and will decode the response successfully")
+        sut?.startNetworkRequest(urlString: "https://reqres.in/api/users  '.#@#$@$ '?page=100", data: nil, methodType: .MethodTypeGET) { (_ result: Result<ContactList, CONTACTERROR>) in
+            switch result {
+            case .success(let response):
+                print(response)
+                break
+            case .failure(let error) :
+                switch error {
+                case .StatusCode(_, _): break
+                case .Decoding:break
+                case .InvalidImage: break
+                case .InvalidURL:
+                    expectation.fulfill();
+                    break
+                case .NoInternet: break
+                case .Other(_): break
+                }
+                break
+            }
+
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
+
 
 }

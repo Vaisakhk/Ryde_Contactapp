@@ -24,10 +24,6 @@ class NetworkHandler {
      */
     
     public func startNetworkRequest<T: Codable>(urlString:String,data:[String:String]?, methodType:MethodType, completion: @escaping (Result<T, CONTACTERROR>) -> Void)  {
-        debugPrint("*******  WORK START ****** ")
-        debugPrint(urlString, "")
-        debugPrint("*******  WORK END ****** ")
-        
         guard let requestUrl = URL(string: urlString) else {
             completion(.failure(.InvalidURL))
             return
@@ -48,12 +44,6 @@ class NetworkHandler {
             }
             if let error = error {
                 completion(.failure(.Other(error)))
-                return
-            }
-            
-            guard let httpResponse = response as? HTTPURLResponse,
-                  (200...299).contains(httpResponse.statusCode) else {
-                completion(.failure(.StatusCode(response, error)))
                 return
             }
             

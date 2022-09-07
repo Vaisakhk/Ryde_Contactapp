@@ -12,7 +12,9 @@ class ViewController: UIViewController {
     var presenter: HomeViewToPresenterProtocol?
     @IBOutlet weak var tableView: UITableView!
     
-    //MARK: - View Life cycle
+    /*
+     *View Life cycle
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidload()
@@ -20,7 +22,9 @@ class ViewController: UIViewController {
         customizeUI()
     }
     
-    //MARK: - View Customization
+    /*
+     * View Customization
+     */
     func customizeUI() {
         title = "Contact"
         addRightBarButtonCustom()
@@ -41,7 +45,9 @@ class ViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = barButton
     }
     
-    //MARK: - UIView Actions
+    /*
+     * View Actions
+     */
     @objc func backButtonaction() {
        
     }

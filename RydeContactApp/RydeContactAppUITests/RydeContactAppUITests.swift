@@ -21,6 +21,9 @@ class RydeContactAppUITests: XCTestCase {
         
     }
     
+    /*
+     * Home view UI Testing
+     */
     func testHomeNavigationBar() {
         let contactNavigationBar = app.navigationBars["Contact"]
         XCTAssert(contactNavigationBar.exists, "Conact Navigation bar not exists" )
@@ -40,6 +43,47 @@ class RydeContactAppUITests: XCTestCase {
         XCTAssert(tablewCell.isEnabled, "User interaction not enabled for Movie Collectionview Cell" )
     }
     
+    /*
+     * Add view UI Testing
+     */
+    func testAddViewNavigation() {
+        let contactNavigationBar = app.navigationBars["Contact"]
+        let groupsButton = contactNavigationBar.buttons["Groups"]
+        groupsButton.tap()
+        let plusButton = contactNavigationBar.buttons["Plus"]
+        plusButton.tap()
+        let addContactNavigationBar = app.navigationBars["Add Contact"]
+        XCTAssert(addContactNavigationBar.exists, "Not navigated to Add Contact Screen" )
+        let cancelButton = addContactNavigationBar.buttons["Cancel"]
+        XCTAssert(cancelButton.exists, "Cancel button not exists" )
+        XCTAssert(cancelButton.isEnabled, "User interaction not enabled for Cancel button" )
+    
+        let doneButton = addContactNavigationBar.buttons["Done"]
+        XCTAssert(doneButton.exists, "Done button not exists" )
+        XCTAssert(doneButton.isEnabled, "User interaction not enabled for Done button" )
+        cancelButton.tap()
+    }
+    
+    func testAddViewNavigationBar() {
+        let contactNavigationBar = app.navigationBars["Contact"]
+        let plusButton = contactNavigationBar.buttons["Plus"]
+        plusButton.tap()
+        let addContactNavigationBar = app.navigationBars["Add Contact"]
+        
+        let elementsQuery = app.scrollViews.otherElements
+        let firstNameTextField = elementsQuery.textFields["First Name"]
+        XCTAssert(firstNameTextField.exists, "First name not exists" )
+        XCTAssert(firstNameTextField.isEnabled, "User interaction not enabled for First name" )
+        firstNameTextField.tap()
+        let lastNameTextField = elementsQuery.textFields["Last Name"]
+        XCTAssert(lastNameTextField.exists, "Last name not exists" )
+        XCTAssert(lastNameTextField.isEnabled, "User interaction not enabled for Last name" )
+        addContactNavigationBar.buttons["Cancel"].tap()
+    }
+    
+    /*
+     * Detail view UI Testing
+     */
     func testDetailViewNavigation() {
         let tableViewCell = app.tables.children(matching: .cell).element(boundBy: 0)
         XCTAssert(tableViewCell.exists, "Movie Collectionview Cell not exists" )
@@ -64,27 +108,11 @@ class RydeContactAppUITests: XCTestCase {
         XCTAssert(backButton.exists, "Back button not exists" )
         XCTAssert(backButton.isEnabled, "User interaction not enabled for Back button" )
         backButton.tap()
-        
-//        let app = XCUIApplication()
-//        let contactButton = app.navigationBars["Detail"].buttons["Contact"]
-//        contactButton.tap()
-//
-//        let tablesQuery = app.tables
-//        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Janet Weaver"]/*[[".cells.staticTexts[\"Janet Weaver\"]",".staticTexts[\"Janet Weaver\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-//        contactButton.tap()
-//        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Eve Holt"]/*[[".cells.staticTexts[\"Eve Holt\"]",".staticTexts[\"Eve Holt\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-//        contactButton.tap()
-//        tablesQuery.cells.containing(.staticText, identifier:"Charles Morris").element.tap()
-//
-
-//        let addContactNavigationBar = app.navigationBars["Add Contact"]
-//        XCTAssert(addContactNavigationBar.exists, "Conact Detail Navigation bar not exists" )
-//        XCTAssert(addContactNavigationBar.isEnabled, "User interaction not enabled for Group button" )
-//        addContactNavigationBar.buttons["Done"].tap()
-//        app.alerts[" Contact App "].scrollViews.otherElements.buttons["Ok"].tap()
-//        addContactNavigationBar.buttons["Cancel"].tap()
     }
     
+    /*
+     * Edit view UI Testing
+     */
     func testEditContactViewNavigation() {
         let tableViewCell = app.tables.children(matching: .cell).element(boundBy: 0)
         XCTAssert(tableViewCell.exists, "Movie Collectionview Cell not exists" )
@@ -98,5 +126,28 @@ class RydeContactAppUITests: XCTestCase {
         addButton.tap()
         let editContactNavigationBar = app.navigationBars["Edit Contact"]
         XCTAssert(editContactNavigationBar.exists, "Not navigated to Edit Contact View" )
+    }
+    
+    func testEditContactViewNavigationBarButton() {
+        let tableViewCell = app.tables.children(matching: .cell).element(boundBy: 0)
+        XCTAssert(tableViewCell.exists, "Movie Collectionview Cell not exists" )
+        XCTAssert(tableViewCell.isEnabled, "User interaction not enabled for contact tableview Cell" )
+        tableViewCell.tap()
+        let addContactNavigationBar = app.navigationBars["Detail"]
+        XCTAssert(addContactNavigationBar.exists, "Not navigated to Detail View" )
+        let addButton = addContactNavigationBar.buttons["Edit"]
+        XCTAssert(addButton.exists, "Edit button not exists" )
+        XCTAssert(addButton.isEnabled, "User interaction not enabled for Edit button" )
+        addButton.tap()
+        let editContactNavigationBar = app.navigationBars["Edit Contact"]
+        
+        let cancelButton = editContactNavigationBar.buttons["Cancel"]
+        XCTAssert(cancelButton.exists, "Cancel button not exists" )
+        XCTAssert(cancelButton.isEnabled, "User interaction not enabled for Cancel button" )
+    
+        let doneButton = editContactNavigationBar.buttons["Done"]
+        XCTAssert(doneButton.exists, "Done button not exists" )
+        XCTAssert(doneButton.isEnabled, "User interaction not enabled for Done button" )
+        cancelButton.tap()
     }
 }

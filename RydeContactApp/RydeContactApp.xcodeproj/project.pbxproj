@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E917EB2028C8E0FA00F39E57 /* Contact.json in Resources */ = {isa = PBXBuildFile; fileRef = E917EB1F28C8E0FA00F39E57 /* Contact.json */; };
+		E917EB2228C8E12300F39E57 /* NetworkHandlerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917EB2128C8E12300F39E57 /* NetworkHandlerTest.swift */; };
+		E917EB2528C8E18B00F39E57 /* NetworkURLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917EB2428C8E18B00F39E57 /* NetworkURLSessionMock.swift */; };
+		E917EB2728C8E55300F39E57 /* Contact_invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = E917EB2628C8E55300F39E57 /* Contact_invalid.json */; };
+		E917EB2A28C8E90800F39E57 /* FileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917EB2928C8E90800F39E57 /* FileHandler.swift */; };
 		E91FF64628C3F153005981A4 /* RydeContactAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF64528C3F153005981A4 /* RydeContactAppTests.swift */; };
 		E91FF65028C3F153005981A4 /* RydeContactAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF64F28C3F153005981A4 /* RydeContactAppUITests.swift */; };
 		E91FF65228C3F153005981A4 /* RydeContactAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FF65128C3F153005981A4 /* RydeContactAppUITestsLaunchTests.swift */; };
@@ -78,6 +83,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E917EB1F28C8E0FA00F39E57 /* Contact.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contact.json; sourceTree = "<group>"; };
+		E917EB2128C8E12300F39E57 /* NetworkHandlerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandlerTest.swift; sourceTree = "<group>"; };
+		E917EB2428C8E18B00F39E57 /* NetworkURLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkURLSessionMock.swift; sourceTree = "<group>"; };
+		E917EB2628C8E55300F39E57 /* Contact_invalid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contact_invalid.json; sourceTree = "<group>"; };
+		E917EB2928C8E90800F39E57 /* FileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandler.swift; sourceTree = "<group>"; };
 		E91FF62828C3F14F005981A4 /* RydeContactApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RydeContactApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91FF63C28C3F153005981A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E91FF64128C3F153005981A4 /* RydeContactAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RydeContactAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +170,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E917EB1E28C8E0FA00F39E57 /* MockJson */ = {
+			isa = PBXGroup;
+			children = (
+				E917EB2628C8E55300F39E57 /* Contact_invalid.json */,
+				E917EB1F28C8E0FA00F39E57 /* Contact.json */,
+			);
+			path = MockJson;
+			sourceTree = "<group>";
+		};
+		E917EB2328C8E18200F39E57 /* MockUrlSession */ = {
+			isa = PBXGroup;
+			children = (
+				E917EB2428C8E18B00F39E57 /* NetworkURLSessionMock.swift */,
+			);
+			path = MockUrlSession;
+			sourceTree = "<group>";
+		};
+		E917EB2828C8E8F000F39E57 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E917EB2928C8E90800F39E57 /* FileHandler.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		E91FF61F28C3F14F005981A4 = {
 			isa = PBXGroup;
 			children = (
@@ -195,11 +230,15 @@
 		E91FF64428C3F153005981A4 /* RydeContactAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				E917EB2828C8E8F000F39E57 /* Helper */,
+				E917EB2328C8E18200F39E57 /* MockUrlSession */,
+				E917EB1E28C8E0FA00F39E57 /* MockJson */,
 				E91FF64528C3F153005981A4 /* RydeContactAppTests.swift */,
 				E9A0944728C63E4800776F3A /* HomeInteractorTest.swift */,
 				E9A0944928C642B300776F3A /* DetailInteractorTest.swift */,
 				E9A0944B28C6447800776F3A /* EditInteractorTest.swift */,
 				E9A094B928C78EEC00776F3A /* AddInteractorTest.swift */,
+				E917EB2128C8E12300F39E57 /* NetworkHandlerTest.swift */,
 			);
 			path = RydeContactAppTests;
 			sourceTree = "<group>";
@@ -665,6 +704,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E917EB2728C8E55300F39E57 /* Contact_invalid.json in Resources */,
+				E917EB2028C8E0FA00F39E57 /* Contact.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,9 +766,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9A0944C28C6447800776F3A /* EditInteractorTest.swift in Sources */,
+				E917EB2228C8E12300F39E57 /* NetworkHandlerTest.swift in Sources */,
+				E917EB2A28C8E90800F39E57 /* FileHandler.swift in Sources */,
 				E9A0944A28C642B300776F3A /* DetailInteractorTest.swift in Sources */,
 				E9A094BA28C78EEC00776F3A /* AddInteractorTest.swift in Sources */,
 				E91FF64628C3F153005981A4 /* RydeContactAppTests.swift in Sources */,
+				E917EB2528C8E18B00F39E57 /* NetworkURLSessionMock.swift in Sources */,
 				E9A0944828C63E4800776F3A /* HomeInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

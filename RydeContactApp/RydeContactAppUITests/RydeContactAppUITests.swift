@@ -8,34 +8,95 @@
 import XCTest
 
 class RydeContactAppUITests: XCTestCase {
-
+    var app: XCUIApplication!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
+        
+        app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
+    
+    override func tearDownWithError() throws {
+        
+    }
+    
+    func testHomeNavigationBar() {
+        let contactNavigationBar = app.navigationBars["Contact"]
+        XCTAssert(contactNavigationBar.exists, "Conact Navigation bar not exists" )
+        let groupsButton = contactNavigationBar.buttons["Groups"]
+        XCTAssert(groupsButton.exists, "Group button not exists" )
+        XCTAssert(groupsButton.isEnabled, "User interaction not enabled for Group button" )
+        groupsButton.tap()
+        let plusButton = contactNavigationBar.buttons["Plus"]
+        plusButton.tap()
+        XCTAssert(plusButton.exists, "Plus button not exists" )
+        XCTAssert(plusButton.isEnabled, "User interaction not enabled for Plus button" )
+    }
+    
+    func testHomeTableView() {
+        let tablewCell = app.tables.children(matching: .cell).element(boundBy: 0)
+        XCTAssert(tablewCell.exists, "Conact TableView Cell not exists" )
+        XCTAssert(tablewCell.isEnabled, "User interaction not enabled for Movie Collectionview Cell" )
+    }
+    
+    func testDetailViewNavigation() {
+        let tableViewCell = app.tables.children(matching: .cell).element(boundBy: 0)
+        XCTAssert(tableViewCell.exists, "Movie Collectionview Cell not exists" )
+        XCTAssert(tableViewCell.isEnabled, "User interaction not enabled for contact tableview Cell" )
+        tableViewCell.tap()
+        let addContactNavigationBar = app.navigationBars["Detail"]
+        XCTAssert(addContactNavigationBar.exists, "Not navigated to Detail View" )
+    }
+    
+    func testDetailViewNavigationBarButton() {
+        let tableViewCell = app.tables.children(matching: .cell).element(boundBy: 0)
+        tableViewCell.tap()
+        let addContactNavigationBar = app.navigationBars["Detail"]
+        XCTAssert(addContactNavigationBar.exists, "Conact Detail Navigation bar not exists" )
+        XCTAssert(addContactNavigationBar.isEnabled, "User interaction not enabled for Group button" )
+        
+        let addButton = addContactNavigationBar.buttons["Edit"]
+        XCTAssert(addButton.exists, "Edit button not exists" )
+        XCTAssert(addButton.isEnabled, "User interaction not enabled for Edit button" )
+    
+        let backButton = addContactNavigationBar.buttons["Contact"]
+        XCTAssert(backButton.exists, "Back button not exists" )
+        XCTAssert(backButton.isEnabled, "User interaction not enabled for Back button" )
+        backButton.tap()
+        
+//        let app = XCUIApplication()
+//        let contactButton = app.navigationBars["Detail"].buttons["Contact"]
+//        contactButton.tap()
+//
+//        let tablesQuery = app.tables
+//        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Janet Weaver"]/*[[".cells.staticTexts[\"Janet Weaver\"]",".staticTexts[\"Janet Weaver\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//        contactButton.tap()
+//        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Eve Holt"]/*[[".cells.staticTexts[\"Eve Holt\"]",".staticTexts[\"Eve Holt\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//        contactButton.tap()
+//        tablesQuery.cells.containing(.staticText, identifier:"Charles Morris").element.tap()
+//
 
-//    func testLaunchPerformance() throws {
-//        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-//            // This measures how long it takes to launch your application.
-//            measure(metrics: [XCTApplicationLaunchMetric()]) {
-//                XCUIApplication().launch()
-//            }
-//        }
-//    }
+//        let addContactNavigationBar = app.navigationBars["Add Contact"]
+//        XCTAssert(addContactNavigationBar.exists, "Conact Detail Navigation bar not exists" )
+//        XCTAssert(addContactNavigationBar.isEnabled, "User interaction not enabled for Group button" )
+//        addContactNavigationBar.buttons["Done"].tap()
+//        app.alerts[" Contact App "].scrollViews.otherElements.buttons["Ok"].tap()
+//        addContactNavigationBar.buttons["Cancel"].tap()
+    }
+    
+    func testEditContactViewNavigation() {
+        let tableViewCell = app.tables.children(matching: .cell).element(boundBy: 0)
+        XCTAssert(tableViewCell.exists, "Movie Collectionview Cell not exists" )
+        XCTAssert(tableViewCell.isEnabled, "User interaction not enabled for contact tableview Cell" )
+        tableViewCell.tap()
+        let addContactNavigationBar = app.navigationBars["Detail"]
+        XCTAssert(addContactNavigationBar.exists, "Not navigated to Detail View" )
+        let addButton = addContactNavigationBar.buttons["Edit"]
+        XCTAssert(addButton.exists, "Edit button not exists" )
+        XCTAssert(addButton.isEnabled, "User interaction not enabled for Edit button" )
+        addButton.tap()
+        let editContactNavigationBar = app.navigationBars["Edit Contact"]
+        XCTAssert(editContactNavigationBar.exists, "Not navigated to Edit Contact View" )
+    }
 }

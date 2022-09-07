@@ -75,19 +75,4 @@ class CoreDataHandler {
         }
         return data
     }
-    
-    // MARK:- Delete managed object.
-    public func deleteObject(object:NSManagedObject) ->Void {
-        persistentContainer.viewContext.delete(object)
-    }
-    
-    public func deleteAllDataWithCondition(name: String,predicate:NSPredicate?) {
-        do {
-            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: name)
-            fetchRequest.predicate = predicate
-                let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-            _ = try (persistentContainer.persistentStoreCoordinator.execute(deleteRequest, with: persistentContainer.viewContext))
-        } catch _ as NSError {
-        }
-    }
 }
